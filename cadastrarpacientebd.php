@@ -24,15 +24,20 @@ if (isset($_GET["nome"])){
 }else {if (isset($_POST["nome"])){
   $nome = utf8_decode($_POST["nome"]);
 }};
-if (isset($_GET["matricula"])){
-  $matricula = $_GET["matricula"];
-}else {if (isset($_POST["matricula"])){
-  $matricula = $_POST["matricula"];
+if (isset($_GET["convenio"])){
+  $convenio = $_GET["convenio"];
+}else {if (isset($_POST["convenio"])){
+  $convenio = $_POST["convenio"];
 }};
-if (isset($_GET["cpf"])){
-  $cpf = $_GET["cpf"];
-}else {if (isset($_POST["cpf"])){
-  $cpf = $_POST["cpf"];
+if (isset($_GET["email"])){
+  $email = $_GET["email"];
+}else {if (isset($_POST["email"])){
+  $email = $_POST["email"];
+}};
+if (isset($_GET["profissao"])){
+	$profissao = $_GET["profissao"];
+}else {if (isset($_POST["profissao"])){
+	$profissao = $_POST["profissao"];
 }};
 if (isset($_GET["rua"])){
   $endereco = utf8_decode($_GET["rua"]);
@@ -87,7 +92,7 @@ if (isset($_GET["codigo"])){
   $codigo = $_POST["codigo"];
 }};
 
-$sql = "INSERT INTO pacientes (nome,matricula,data,cpf,endereco,cep,bairro,telefone,celular,cidade,estado,codigo) VALUES ('$nome','$matricula','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$estado','$codigo');";
+$sql = "INSERT INTO pacientes (nome,convenio,data,endereco,cep,bairro,telefone,celular,cidade,estado,codigo,email,profissao) VALUES ('$nome','$convenio','$data','$endereco','$cep','$bairro','$tel','$cel','$cidade','$estado','$codigo','$email','$profissao');";
 
 // Executa o comando SQL
 mysql_query($sql);

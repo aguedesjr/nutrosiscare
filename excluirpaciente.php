@@ -3,14 +3,16 @@
 
 <!-- REALIZA A CONSULTA NO DB DA INFORMACAO ENVIADA -->
 <?
+//Requer conexão previa com o banco
+require_once ("configs/conn.php");
 
-if (isset($_GET["cpf"])){
-    $cpf = utf8_decode($_GET["cpf"]);
-}else {if (isset($_POST["cpf"])){
-    $cpf = utf8_decode($_POST["cpf"]);
+if (isset($_GET["codigo"])){
+    $codigo = utf8_decode($_GET["codigo"]);
+}else {if (isset($_POST["codigo"])){
+    $codigo = utf8_decode($_POST["codigo"]);
 }};
 
-$sql = "SELECT matricula, data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id FROM pacientes WHERE cpf = '$cpf'";
+$sql = "SELECT matricula, data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id FROM pacientes WHERE codigo = '$codigo'";
 $resultado = mysql_query($sql);
 $result = mysql_fetch_array($resultado);
 $linhas = mysql_num_rows($resultado);
@@ -52,6 +54,8 @@ $datan = implode("/", array_reverse(explode("-", $result[1])));
 
     <img src="imagens/photo1.jpg" />
     
+    <br><br><br>
+    
     <center><img src="imagens/principal1.png" /></center>
     <br><br>
     
@@ -76,12 +80,12 @@ $datan = implode("/", array_reverse(explode("-", $result[1])));
                                 <input type="text" id="nome" name="nome" value="<? echo utf8_encode($result[9])?>" placeholder="Nome do Paciente" disabled>
                             </div>
                             <table><tr>
-                            <td bgcolor="#FDFDFD">
+                            <!--<td bgcolor="#FDFDFD">
                                 <label>CPF</label>
                                 <div class="input-control text size2" id="divcpf" data-role="input-control">
                                     <input type="text" id="cpf" name="cpf" maxlength="14" value="<? echo $cpf?>" placeholder="Informe o CPF" disabled>
                                 </div>
-                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td> -->
                             <td bgcolor="#FDFDFD">
                                 <label>Data Nasc.</label>
                                 <div class="input-control text size2" data-role="input-control">

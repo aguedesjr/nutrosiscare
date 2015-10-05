@@ -123,6 +123,8 @@
 
     <img src="imagens/photo1.jpg" />
     
+    <br><br><br>
+    
     <center><img src="imagens/principal1.png" /></center>
     <br><br>
     
@@ -138,6 +140,7 @@
                     <ul class="tabs">
                         <li class="active"><a href="#_page_1">Dados Pessoais</a></li>
                         <li><a href="#_page_2">Endereço</a></li>
+                        <li><a href="#_page_3">Outros</a></li>
                     </ul>
                     <div class="frames">
                         <div class="frame" id="_page_1">
@@ -150,21 +153,21 @@
                                 <input type="text" id="nome" name="nome" placeholder="Nome do Paciente">
                             </div>
                             <table><tr>
-                            <td bgcolor="#FDFDFD">
+                            <!-- <td bgcolor="#FDFDFD">
                                 <label>CPF</label>
                                 <div class="input-control text size2" id="divcpf" data-role="input-control">
                                     <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Informe o CPF">
                                 </div>
-                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td> -->
                             <td bgcolor="#FDFDFD">
                                 <label>Data Nasc.</label>
                                 <div class="input-control text size2" data-role="input-control">
                                     <input type="text" id="data" name="data" placeholder="Data">
                                 </div></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
-                                <label>Matricula</label>
-                                <div class="input-control text size3" data-role="input-control">
-                                    <input type="text" id="matricula" name="matricula" placeholder="Matricula">
+                                <label>Convênio</label>
+                                <div class="input-control text size4" data-role="input-control">
+                                    <input type="text" id="convenio" name="convenio" placeholder="Convênio">
                                 </div></td>
                             </tr></table>
                             <table><tr>
@@ -228,6 +231,40 @@
                                     </div>
                                 </td> 
                             </tr></table><br />
+                            <center>
+                                
+                                <button type="submit" class="image-button primary image-left">
+                                    Salvar
+                                    <i class="icon-floppy on-left" style="top: -3px; left: 7px">
+                                    </i>
+                                </button>
+                                <!--<button type="button" onclick="zerar();" class="image-button danger image-left">
+                                    Limpar
+                                    <i class="icon-spin on-left" style="top: -2px; left: 7px">
+                                    </i>
+                                </button>-->
+                                
+                            </center>
+                        </div>
+                        <div class="frame" id="_page_3">
+                            <table><tr>
+                            <!-- <td bgcolor="#FDFDFD">
+                                <label>CEP</label>
+                                <div class="input-control text size2" data-role="input-control">
+                                    <input type="text" id="cep" name="cep" maxlength="9" placeholder="Informe o CEP">
+                                </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td> -->
+                            <td bgcolor="#FDFDFD">
+                                <label>E-Mail</label>
+                                <div class="input-control text size4" data-role="input-control">
+                                    <input type="text" id="email" name="email" placeholder="E-Mail">
+                                </div></td>
+                            </tr></table>
+                            <label>Profissão</label>
+                            <div class="input-control text size6" data-role="input-control">
+                                <input type="text" id="profissao" name="profissao" placeholder="Profissão">
+                            </div>
+                            <br /><br />
                             <center>
                                 
                                 <button type="submit" class="image-button primary image-left">
