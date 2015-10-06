@@ -21,7 +21,7 @@ define('FPDF_FONTPATH','fpdf16/font/');
 		    //Move para a direita
 		    $this->Cell(65);
 		    //Titulo
-		    $this->Image('imagens/logo_prodom1.jpg',60,8,100); //Lateral, Vertical, Tamanho
+		    $this->Image('imagens/logo.jpg',100,30,10); //Lateral, Vertical, Tamanho
 		    //$this->Cell(65);
 		    //$this->Cell(70,10,'Guia de Autorização',0,0,'C');
 		    //Move para a direita

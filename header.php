@@ -10,7 +10,7 @@ require_once ("configs/conn.php");
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="imagens/icone.ico"/> <!-- ICONE DA PAGINA -->
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/logo_nutro.ico"/> <!-- ICONE DA PAGINA -->
     <script src="js/jquery.min.js"></script>        <!-- SCRIPT BASE -->
     <script src="js/jquery.widget.min.js"></script> <!-- SCRIPT BASE -->
     <script src="js/jquery.mousewheel.js"></script> <!-- SCRIPT BASE -->

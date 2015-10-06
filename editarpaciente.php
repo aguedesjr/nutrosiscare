@@ -10,7 +10,7 @@ if (isset($_GET["codigo"])){
     $codigo = utf8_decode($_POST["codigo"]);
 }};
 
-$sql = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio FROM pacientes WHERE codigo = '$codigo'";
+$sql = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo'";
 $resultado = mysql_query($sql);
 $result = mysql_fetch_array($resultado);
 $linhas = mysql_num_rows($resultado);
@@ -62,6 +62,7 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
     <br>
 
     <img src="imagens/photo1.jpg" />
+    <br><br><br>
     
     <center><img src="imagens/principal1.png" /></center>
     <br><br>
@@ -73,6 +74,7 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
             <div class="span1"></div>
             <div class="span10">
                 <form method="POST" onsubmit="return valida(this);" action="editarpacientebd.php" name="editarpaciente" id="editarpaciente">
+                <input type="hidden" id="id" name="id" value="<? echo $result[9]?>">
                 <div class="editpaciente">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
@@ -195,12 +197,12 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>E-Mail</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="email" name="email" placeholder="E-Mail">
+                                    <input type="text" id="email" name="email" value="<? echo utf8_encode($result[12])?>" placeholder="E-Mail">
                                 </div></td>
                             </tr></table>
                             <label>Profissão</label>
                             <div class="input-control text size6" data-role="input-control">
-                                <input type="text" id="profissao" name="profissao" placeholder="Profissão">
+                                <input type="text" id="profissao" name="profissao" value="<? echo utf8_encode($result[11])?>" placeholder="Profissão">
                             </div>
                             <br /><br />
                             <center>

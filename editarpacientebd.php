@@ -18,10 +18,10 @@ require_once ("configs/conn.php");
 //$ip = getenv('REMOTE_ADDR'); //Pega o IP do micro que está usando o sistema
 
 // Verifica se as vaiáveis de POST ou GET existem;
-if (isset($_GET["metodo"])){
-  $metodo=$_GET["metodo"];
-} else { if (isset($_POST["metodo"])){
-$metodo = $_POST["metodo"];
+if (isset($_GET["convenio"])){
+  $convenio=$_GET["convenio"];
+} else { if (isset($_POST["convenio"])){
+$convenio = $_POST["convenio"];
 }};
 
 if (isset($_GET["nome"])){
@@ -86,8 +86,18 @@ if (isset($_GET["id"])){
 }else {if (isset($_POST["id"])){
   $id = $_POST["id"];
 }};
+if (isset($_GET["email"])){
+	$email = utf8_decode($_GET["email"]);
+}else {if (isset($_POST["email"])){
+	$email = utf8_decode($_POST["email"]);
+}};
+if (isset($_GET["profissao"])){
+	$profissao = utf8_decode($_GET["profissao"]);
+}else {if (isset($_POST["profissao"])){
+	$profissao = utf8_decode($_POST["profissao"]);
+}};
 
-$sql = "UPDATE pacientes SET nome='$nome', matricula='$matricula', data='$data', cpf='$cpf', endereco='$endereco', cep='$cep', bairro='$bairro', telefone='$tel', celular='$cel', cidade='$cidade', estado='$estado' WHERE id = '$id';";
+$sql = "UPDATE pacientes SET nome='$nome', convenio='$convenio', profissao='$profissao', data='$data', email='$email', endereco='$endereco', cep='$cep', bairro='$bairro', telefone='$tel', celular='$cel', cidade='$cidade', estado='$estado' WHERE id = '$id';";
 
 // Executa o comando SQL
 mysql_query($sql);

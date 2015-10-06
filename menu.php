@@ -15,7 +15,7 @@
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="cadastrarpaciente.php"><i class="icon-file"></i>Cadastrar</a></li>
                                 <li><a href="buscarpaciente.php"><i class="icon-pencil"></i>Editar</a></li>
-                                <li><a href="buscarpacienteexcluir.php"><i class="icon-cancel-2"></i>Excluir</a></li>
+                                <!-- <li><a href="buscarpacienteexcluir.php"><i class="icon-cancel-2"></i>Excluir</a></li>  -->
                             </ul>
                         </li>
                         <!-- <li class="stick bg-yellow">
