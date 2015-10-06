@@ -481,7 +481,7 @@ $resultpac = mysql_fetch_array($resultadopac);
             <div class="span1"></div>
             <div class="span10">
                 <form method="POST" onsubmit="return valida(this);" action="salvaautmed.php" name="salvaautorizacaomedica" id="salvaautorizacaomedica">
-                <div class="fichaautorizacao">
+                <div class="fichaanaminese">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
                         <li class="active"><a href="#_page_1">Dados Pessoais</a></li>
@@ -496,7 +496,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
-                                    <a class="button image-button primary image-left" name="buscarPaciente" href="buscarpacienteautorizacaomedica.php"><i class="icon-search on-left" style="top: -3px; left: 7px"></i>Buscar</a>
+                                    <a class="button image-button primary image-left" name="buscarPaciente" href="buscarpacienteanaminese.php"><i class="icon-search on-left" style="top: -3px; left: 7px"></i>Buscar</a>
                                 </td> 
                             </tr></table>
                             <label>Nome</label>

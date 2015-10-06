@@ -49,7 +49,7 @@ $resultadop = mysql_query($sqlp);
     		<? include ("menu.php"); ?>
             <div class="span1"></div>
             <div class="span10">
-            	<div class="fichaautorizacao">
+            	<div class="fichaanaminese">
             	<div class="tab-control" data-role="tab-control">
             		<ul class="tabs">
                         <li class="active"><a href="#_page_1">Pacientes</a></li>
@@ -71,7 +71,7 @@ $resultadop = mysql_query($sqlp);
 							        		while ($row = mysql_fetch_array($resultadop)) {
 							        	?>
 							        	<tr>
-							        		<td><a  href="fichaautorizacaomedica.php?codigoaut=<? echo $row[1];?>"><? echo $row[1];?></a></td>
+							        		<td><a  href="fichaanaminese.php?codigoaut=<? echo $row[1];?>"><? echo $row[1];?></a></td>
 							        		<td><? echo utf8_encode($row[0]);?></td>
 							        	</tr>
 							        	<?}?>
