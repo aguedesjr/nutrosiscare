@@ -54,9 +54,9 @@
                         <li class="stick bg-yellow">
                             <a class="dropdown-toggle" href="#"><i class="icon-heart"></i>Fichas Médicas</a>
                             <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="fichaautorizacaomedica.php"><i class="icon-foursquare"></i>Autorização</a></li>
-                                <li><a href="fichabuscaprocedimentomedicomedico.php"><i class="icon-copy"></i>Procedimentos</a></li>
-                                <li><a href="fichamedica.php"><i class="icon-folder-2"></i>Prontuário</a></li>
+                                <li><a href="fichaautorizacaomedica.php"><i class="icon-stats"></i>Anaminese</a></li>
+                                <!-- <li><a href="fichabuscaprocedimentomedicomedico.php"><i class="icon-copy"></i>Procedimentos</a></li>-->
+                                <li><a href="fichamedica.php"><i class="icon-clipboard-2"></i>Receituário</a></li>
                             </ul>
                         </li>
                         
