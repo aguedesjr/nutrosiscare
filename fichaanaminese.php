@@ -459,7 +459,7 @@ if (isset($_GET["codigoaut"])){
 	$codigo = utf8_decode($_POST["codigoaut"]);
 }};
 
-$sqlpac = "SELECT nome FROM pacientes WHERE codigo = '$codigo'";
+$sqlpac = "SELECT nome, id, convenio FROM pacientes WHERE codigo = '$codigo'";
 $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
 ?>
@@ -485,6 +485,8 @@ $resultpac = mysql_fetch_array($resultadopac);
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
                         <li class="active"><a href="#_page_1">Dados Pessoais</a></li>
+                        <li class=""><a href="#_page_2">Colesterol</a></li>
+                        <li class=""><a href="#_page_3">Conduta</a></li>
                     </ul>
                     <div class="frames">
                         <div class="frame" id="_page_1">
@@ -502,29 +504,15 @@ $resultpac = mysql_fetch_array($resultadopac);
                             <label>Nome</label>
                             <div class="input-control text" data-role="input-control">
                                 <input type="text" id="nome" name="nome" disabled="disabled" value="<? echo utf8_encode($resultpac[0])?>" placeholder="Nome do Paciente">
+                                <input type="hidden" id="id" name="id" value="<? echo $resultpac[1];?>"> <!-- Envia o id do paciente -->
                             </div>
                             <table><tr>
                             <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
-                                <div class="input-control select">
-                                    <select name="convenio" id="convenio">
-                                        <option value="">SELECIONE</option>
-                                        <? while ($linhas = mysql_fetch_array($resultado, MYSQL_NUM)){ ?>
-                                        <option value=<? echo $linhas[1];?>><? echo utf8_encode($linhas[0]);?></option>
-                                        <?};?>
-                                    </select>
-                                </div>
+                                <div class="input-control text size3" data-role="input-control">
+	                                <input type="text" disabled="disabled" value="<? echo utf8_encode($resultpac[2]);?>" id="convenio" name="convenio" placeholder="Convênio">
+	                            </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
-                            <td bgcolor="#FDFDFD">
-                                <label>Profissional</label>
-                                <div class="input-control select">
-                                    <select name="profissional" id="profissional">
-                                        <option value="">SELECIONE</option>
-                                        <? while ($linhasp = mysql_fetch_array($resultadop, MYSQL_NUM)){ ?>
-                                        <option value=<? echo $linhasp[1];?>><? echo utf8_encode($linhasp[0]);?></option>
-                                        <?};?>
-                                    </select>
-                                </div><br /></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <td bgcolor="#FDFDFD">
                                     <label>Data</label>
@@ -537,88 +525,8 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </tr>
                             </table>
                             
-                            <label>Observação</label>
-                            <div class="input-control text" data-role="input-control">
-                                <input type="text" name="obs" placeholder="Observação">
-                            </div>
                             
-                            <!-- TABELA COM OS PROCEDIMENTOS -->
-                                
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th bgcolor="#FDFDFD" align="left">Código</th>
-                                            <th bgcolor="#FDFDFD" align="left">Procedimento</th>
-                                            <th bgcolor="#FDFDFD" align="left">Valor</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio" id="codconvenio"></select></div></td>
-                                            <td><label id="proc"></label></td><input type="hidden" name="proc" value="" />
-                                            <td><label id="valor"></label></td><input type="hidden" name="valor" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio2" id="codconvenio2"></select></div></td>
-                                            <td><label id="proc2"></label></td><input type="hidden" name="proc2" value="" />
-                                            <td><label id="valor2"></label></td><input type="hidden" name="valor2" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio3" id="codconvenio3"></select></div></td>
-                                            <td><label id="proc3"></label></td><input type="hidden" name="proc3" value="" />
-                                            <td><label id="valor3"></label></td><input type="hidden" name="valor3" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio4" id="codconvenio4"></select></div></td>
-                                            <td><label id="proc4"></label></td><input type="hidden" name="proc4" value="" />
-                                            <td><label id="valor4"></label></td><input type="hidden" name="valor4" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio5" id="codconvenio5"></select></div></td>
-                                            <td><label id="proc5"></label></td><input type="hidden" name="proc5" value="" />
-                                            <td><label id="valor5"></label></td><input type="hidden" name="valor5" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio6" id="codconvenio6"></select></div></td>
-                                            <td><label id="proc6"></label></td><input type="hidden" name="proc6" value="" />
-                                            <td><label id="valor6"></label></td><input type="hidden" name="valor6" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio7" id="codconvenio7"></select></div></td>
-                                            <td><label id="proc7"></label></td><input type="hidden" name="proc7" value="" />
-                                            <td><label id="valor7"></label></td><input type="hidden" name="valor7" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio8" id="codconvenio8"></select></div></td>
-                                            <td><label id="proc8"></label></td><input type="hidden" name="proc8" value="" />
-                                            <td><label id="valor8"></label></td><input type="hidden" name="valor8" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio9" id="codconvenio9"></select></div></td>
-                                            <td><label id="proc9"></label></td><input type="hidden" name="proc9" value="" />
-                                            <td><label id="valor9"></label></td><input type="hidden" name="valor9" value="" />
-                                        </tr>
-                                        <tr>
-                                            <td><div class="input-control select"><select name="codconvenio10" id="codconvenio10"></select></div></td>
-                                            <td><label id="proc10"></label></td><input type="hidden" name="proc10" value="" />
-                                            <td><label id="valor10"></label></td><input type="hidden" name="valor10" value="" />
-                                        </tr>
-                                    </tbody>
-                                </table><br />
-                                
-                                <!-- FIM DA TABELA PROCEDIMENTOS -->
-                                
-                                <!-- VALOR TOTAL DO PROCEDIMENTO -->
-                                
-                                <div class="span6"></div>
-                               	<table>
-                               		<tr>
-                                		<td bgcolor="#FDFDFD"><label id="total">Total: R$ 0,00</label></td>
-                                	</tr>
-                                </table>
-                                <br>
-                                
-                                <!-- FIM DO VALOR TOTAL DO PROCEDIMENTO -->
+							<br>
                             
                             <center>
                                 
@@ -635,6 +543,84 @@ $resultpac = mysql_fetch_array($resultadopac);
                                 
                             </center>
                         </div>
+                        
+                        <div class="frame" id="_page_2">
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Colesterol Total</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="coltotal" name="coltotal" placeholder="Colesterol Total">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>HDL</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="hdl" name="hdl" placeholder="HDL">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>LDL</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="ldl" name="ldl" placeholder="LDL">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>VLDL</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="vldl" name="vldl" placeholder="VLDL">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+							<br>
+                            
+                            <center>
+                                
+                                <button type="submit" class="image-button primary image-left">
+                                    Salvar
+                                    <i class="icon-floppy on-left" style="top: -3px; left: 7px">
+                                    </i>
+                                </button>
+                                <!--<button type="button" onclick="zerar();" class="image-button danger image-left">
+                                    Limpar
+                                    <i class="icon-spin on-left" style="top: -2px; left: 7px">
+                                    </i>
+                                </button>-->
+                                
+                            </center>
+                        </div>
+                        
+                        <div class="frame" id="_page_3">
+                            <label>Conduta</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="conduta" placeholder="Conduta"></textarea>
+                            </div>
+                            <label>Observação</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="obs" placeholder="Observação"></textarea>
+                            </div>
+							<br>
+                            
+                            <center>
+                                
+                                <button type="submit" class="image-button primary image-left">
+                                    Salvar
+                                    <i class="icon-floppy on-left" style="top: -3px; left: 7px">
+                                    </i>
+                                </button>
+                                <!--<button type="button" onclick="zerar();" class="image-button danger image-left">
+                                    Limpar
+                                    <i class="icon-spin on-left" style="top: -2px; left: 7px">
+                                    </i>
+                                </button>-->
+                                
+                            </center>
+                        </div>
+                        
                     </div>
                 </div>
                 </div>
