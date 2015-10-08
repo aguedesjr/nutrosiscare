@@ -51,17 +51,16 @@
                                 <li><a href="fichaprontuario.php"><i class="icon-folder-2"></i>Prontuário</a></li>
                             </ul>
                         </li> -->
+                        <!-- SOMENTE ACESSO DO ADMIN -->
+                        <? if ($_SESSION['perfil'] == "ADMIN"){?>
                         <li class="stick bg-yellow">
                             <a class="dropdown-toggle" href="#"><i class="icon-heart"></i>Fichas Médicas</a>
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="fichaanaminese.php"><i class="icon-stats"></i>Anaminese</a></li>
                                 <!-- <li><a href="fichabuscaprocedimentomedicomedico.php"><i class="icon-copy"></i>Procedimentos</a></li>-->
-                                <li><a href="fichamedica.php"><i class="icon-clipboard-2"></i>Receituário</a></li>
+                                <li><a href="fichareceituario.php"><i class="icon-clipboard-2"></i>Receituário</a></li>
                             </ul>
                         </li>
-                        
-                        <!-- SOMENTE ACESSO DO ADMIN -->
-                        <? if ($_SESSION['perfil'] == "ADMIN"){?>
                         <!-- <li class="stick bg-steel">
                             <a class="dropdown-toggle" href="#"><i class="icon-stats-3"></i>Relatórios</a>
                             <ul class="dropdown-menu" data-role="dropdown">

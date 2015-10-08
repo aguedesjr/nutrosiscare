@@ -90,12 +90,12 @@ $resultpac = mysql_fetch_array($resultadopac);
             <div class="span1"></div>
             <div class="span10">
                 <form method="POST" onsubmit="return valida(this);" action="salvaautmed.php" name="salvaautorizacaomedica" id="salvaautorizacaomedica">
-                <div class="fichaanaminese">
+                <div class="receituario">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
                         <li class="active"><a href="#_page_1">Dados Pessoais</a></li>
-                        <li class=""><a href="#_page_2">Colesterol</a></li>
-                        <li class=""><a href="#_page_3">Conduta</a></li>
+                        <li class=""><a href="#_page_2">Informações</a></li>
+                        <li class=""><a href="#_page_3">Dieta</a></li>
                     </ul>
                     <div class="frames">
                         <div class="frame" id="_page_1">
@@ -107,7 +107,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
-                                    <a class="button image-button primary image-left" name="buscarPaciente" href="buscarpacienteanaminese.php"><i class="icon-search on-left" style="top: -3px; left: 7px"></i>Buscar</a>
+                                    <a class="button image-button primary image-left" name="buscarPaciente" href="buscarpacientereceituario.php"><i class="icon-search on-left" style="top: -3px; left: 7px"></i>Buscar</a>
                                 </td> 
                             </tr></table>
                             <label>Nome</label>
@@ -130,7 +130,37 @@ $resultpac = mysql_fetch_array($resultadopac);
                                         <button class="btn-date"></button>
                                     </div>
                                 </td>
+                                </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Peso</label>
+                                <div class="input-control text size2" data-role="input-control">
+	                                <input type="text" id="peso" name="peso" placeholder="Peso">
+	                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <td bgcolor="#FDFDFD">
+                                    <label>Altura</label>
+                                    <div class="input-control text size2" data-role="input-control">
+                                        <input type="text" name="altura" placeholder="Altura">
+                                    </div>
+                                </td>
                                 <br /></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                                <td bgcolor="#FDFDFD">
+                                <label>IMC</label>
+                                <div class="input-control text size2" data-role="input-control">
+	                                <input type="text" id="imc" name="imc" placeholder="IMC">
+	                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>CA</label>
+                                <div class="input-control text size2" data-role="input-control">
+	                                <input type="text" id="ca" name="ca" placeholder="CA">
+	                            </div>
+                            <br></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
                             </table>
                             
@@ -156,35 +186,85 @@ $resultpac = mysql_fetch_array($resultadopac);
                         <div class="frame" id="_page_2">
                             <table><tr>
                             <td bgcolor="#FDFDFD">
-                                <label>Colesterol Total</label>
-                                <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="coltotal" name="coltotal" placeholder="Colesterol Total">
-                            </div>
-                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
-                            <td bgcolor="#FDFDFD">
-                                <label>HDL</label>
-                                <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="hdl" name="hdl" placeholder="HDL">
+                                <label>Médico Assitente</label>
+                                <div class="input-control text size6" data-role="input-control">
+                                <input type="text" id="med" name="med" placeholder="Médico Assitente">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
                             </table>
                             
+                            <label>Queixa Principal</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="queixa" placeholder="Queixa Principal"></textarea>
+                            </div>
+                            
+                            <label>História Patológica Pregressa</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="histopato" placeholder="História Patológica Pregressa"></textarea>
+                            </div>
+                            
+                            <label>Medicamentos Regulares</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="medreg" placeholder="Medicamentos Regulares"></textarea>
+                            </div>
+                            
                             <table><tr>
                             <td bgcolor="#FDFDFD">
-                                <label>LDL</label>
-                                <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="ldl" name="ldl" placeholder="LDL">
-                            </div>
+                                <label>Alergia Medicamentosa</label>
+                                <div class="input-control select">
+	                                <select name="alergiamed">
+	                                	<option value="">SELECIONE</option>
+	                                	<option value="SIM">SIM</option>
+	                                	<option value="NÃO">NÃO</option>
+	                                </select>
+                                </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
-                                <label>VLDL</label>
-                                <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="vldl" name="vldl" placeholder="VLDL">
-                            </div>
-                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                                <td bgcolor="#FDFDFD">
+                                    <label>Qual</label>
+                                    <div class="input-control text size4" data-role="input-control">
+                                        <input type="text" name="qualalergiamed" placeholder="Qual">
+                                    </div>
+                                </td>
+                                </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
                             </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Hábitos Intestinais</label>
+                                <div class="input-control select">
+	                                <select name="habint">
+	                                	<option value="">SELECIONE</option>
+	                                	<option value="NORMAL">NORMAL</option>
+	                                	<option value="CONSTIPADO">CONSTIPADO</option>
+	                                	<option value="DIARRÉIA">DIARRÉIA</option>
+	                                </select>
+                                </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            
+                            <td bgcolor="#FDFDFD">
+                                <label>Atividade Física</label>
+                                <div class="input-control select">
+	                                <select name="ativfis">
+	                                	<option value="">SELECIONE</option>
+	                                	<option value="SIM">SIM</option>
+	                                	<option value="NÃO">NÃO</option>
+	                                </select>
+                                </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <td bgcolor="#FDFDFD">
+                                    <label>Qual</label>
+                                    <div class="input-control text size4" data-role="input-control">
+                                        <input type="text" name="qualativfis" placeholder="Qual">
+                                    </div>
+                                </td>
+                                </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
 							<br>
                             
                             <center>
@@ -204,13 +284,39 @@ $resultpac = mysql_fetch_array($resultadopac);
                         </div>
                         
                         <div class="frame" id="_page_3">
-                            <label>Conduta</label>
+                            <label>Café da Manhã</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="conduta" placeholder="Conduta"></textarea>
+                                <textarea name="cafe" placeholder="Café da Manhã"></textarea>
                             </div>
-                            <label>Observação</label>
+                            
+                            <label>Colação</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="obs" placeholder="Observação"></textarea>
+                                <textarea name="colacao" placeholder="Colação"></textarea>
+                            </div>
+                            
+                            <label>Almoço</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="almoco" placeholder="Almoço"></textarea>
+                            </div>
+                            
+                            <label>Lanche</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="lanche" placeholder="Lanche"></textarea>
+                            </div>
+                            
+                            <label>Jantar</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="jantar" placeholder="Jantar"></textarea>
+                            </div>
+                            
+                            <label>Ceia</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="ceia" placeholder="Ceia"></textarea>
+                            </div>
+                            
+                            <label>Não Gosta</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="naogosta" placeholder="Não Gosta"></textarea>
                             </div>
 							<br>
                             
