@@ -40,7 +40,6 @@
         </div>
     </div>
 
-<br>
 </body>
 <!-- FIM DO ARQUIVO -->
 

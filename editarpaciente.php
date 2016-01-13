@@ -268,6 +268,7 @@ else { ?>
                         </div>
                         <div class="panel-content">
                             Não foi possível localizar o paciente.
+                            Codigo = <? echo $codigo;?>
                         </div>
                     </div><br />
                     <center>
