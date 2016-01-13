@@ -10,7 +10,7 @@ if (isset($_GET["codigo"])){
     $codigo = $_POST["codigo"];
 }};
 
-$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo'";
+$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '20150910259299'";
 $resultadoeditpac = mysql_query($sqleditpac);
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
