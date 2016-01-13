@@ -10,14 +10,14 @@ if (isset($_GET["codigo"])){
     $codigo = $_POST["codigo"];
 }};
 
-$sql = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo'";
-$resultado = mysql_query($sql);
-$result = mysql_fetch_array($resultado);
-$linhas = mysql_num_rows($resultado);
+$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo'";
+$resultadoeditpac = mysql_query($sqleditpac);
+$resulteditpac = mysql_fetch_array($resultadoeditpac);
+$linhaseditpac = mysql_num_rows($resultadoeditpac);
 
-if ($linhas > 0) { //Verifica se encontrou algum paciente
+if ($linhaseditpac > 0) { //Verifica se encontrou algum paciente
 
-$datan = implode("/", array_reverse(explode("-", $result[0])));
+$datan = implode("/", array_reverse(explode("-", $resulteditpac[0])));
 
 ?>
 
@@ -74,7 +74,7 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
             <div class="span1"></div>
             <div class="span10">
                 <form method="POST" onsubmit="return valida(this);" action="editarpacientebd.php" name="editarpaciente" id="editarpaciente">
-                <input type="hidden" id="id" name="id" value="<? echo $result[9]?>">
+                <input type="hidden" id="id" name="id" value="<? echo $resulteditpac[9]?>">
                 <div class="editpaciente">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
@@ -90,7 +90,7 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
                             </div>
                             <label>Nome</label>
                             <div class="input-control text" id="divnome" data-role="input-control">
-                                <input type="text" id="nome" name="nome" value="<? echo utf8_encode($result[8])?>" placeholder="Nome do Paciente">
+                                <input type="text" id="nome" name="nome" value="<? echo utf8_encode($resulteditpac[8])?>" placeholder="Nome do Paciente">
                             </div>
                             <table><tr>
                             <!-- <td bgcolor="#FDFDFD">
@@ -107,20 +107,20 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
                                 <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="convenio" name="convenio" value="<? echo utf8_encode($result[10])?>" placeholder="Convênio">
+                                    <input type="text" id="convenio" name="convenio" value="<? echo utf8_encode($resulteditpac[10])?>" placeholder="Convênio">
                                 </div></td>
                             </tr></table>
                             <table><tr>
                                 <td bgcolor="#FDFDFD">
                                     <label>Telefone</label>
                                     <div class="input-control text size3" data-role="input-control">
-                                        <input type="text" id="tel" name="tel" value="<? echo utf8_encode($result[4])?>" placeholder="Telefone">
+                                        <input type="text" id="tel" name="tel" value="<? echo utf8_encode($resulteditpac[4])?>" placeholder="Telefone">
                                     </div>
                                 </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
                                     <label>Celular</label>
                                     <div class="input-control text size3" data-role="input-control">
-                                        <input type="text" id="cel" name="cel" value="<? echo utf8_encode($result[5])?>" placeholder="Celular">
+                                        <input type="text" id="cel" name="cel" value="<? echo utf8_encode($resulteditpac[5])?>" placeholder="Celular">
                                     </div>
                                 </td> 
                             </tr></table><br />
@@ -144,30 +144,30 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>CEP</label>
                                 <div class="input-control text size2" data-role="input-control">
-                                    <input type="text" id="cep" name="cep" maxlength="9" value="<? echo utf8_encode($result[2])?>" placeholder="Informe o CEP">
+                                    <input type="text" id="cep" name="cep" maxlength="9" value="<? echo utf8_encode($resulteditpac[2])?>" placeholder="Informe o CEP">
                                 </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <label>Bairro</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="bairro" name="bairro" value="<? echo utf8_encode($result[3])?>" placeholder="Bairro">
+                                    <input type="text" id="bairro" name="bairro" value="<? echo utf8_encode($resulteditpac[3])?>" placeholder="Bairro">
                                 </div></td>
                             </tr></table>
                             <label>Rua</label>
                             <div class="input-control text size6" data-role="input-control">
-                                <input type="text" id="rua" name="rua" value="<? echo utf8_encode($result[1])?>" placeholder="Nome da Rua / Logradouro">
+                                <input type="text" id="rua" name="rua" value="<? echo utf8_encode($resulteditpac[1])?>" placeholder="Nome da Rua / Logradouro">
                             </div>
                             <table><tr>
                                 <td bgcolor="#FDFDFD">
                                     <label>Cidade</label>
                                     <div class="input-control text size5" data-role="input-control">
-                                        <input type="text" id="cidade" name="cidade" value="<? echo utf8_encode($result[6])?>" placeholder="Cidade">
+                                        <input type="text" id="cidade" name="cidade" value="<? echo utf8_encode($resulteditpac[6])?>" placeholder="Cidade">
                                     </div>
                                 </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
                                     <label>UF</label>
                                     <div class="input-control text size1" data-role="input-control">
-                                        <input type="text" id="estado" name="estado" value="<? echo utf8_encode($result[7])?>" placeholder="Estado">
+                                        <input type="text" id="estado" name="estado" value="<? echo utf8_encode($resulteditpac[7])?>" placeholder="Estado">
                                     </div>
                                 </td> 
                             </tr></table><br />
@@ -197,12 +197,12 @@ $datan = implode("/", array_reverse(explode("-", $result[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>E-Mail</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="email" name="email" value="<? echo utf8_encode($result[12])?>" placeholder="E-Mail">
+                                    <input type="text" id="email" name="email" value="<? echo utf8_encode($resulteditpac[12])?>" placeholder="E-Mail">
                                 </div></td>
                             </tr></table>
                             <label>Profissão</label>
                             <div class="input-control text size6" data-role="input-control">
-                                <input type="text" id="profissao" name="profissao" value="<? echo utf8_encode($result[11])?>" placeholder="Profissão">
+                                <input type="text" id="profissao" name="profissao" value="<? echo utf8_encode($resulteditpac[11])?>" placeholder="Profissão">
                             </div>
                             <br /><br />
                             <center>
@@ -269,7 +269,7 @@ else { ?>
                         <div class="panel-content">
                             Não foi possível localizar o paciente.
                             Codigo = <? echo $codigo;?>
-                            Linhas = <? echo $result;?>
+                            Linhas = <? echo $linhaseditpac;?>
                         </div>
                     </div><br />
                     <center>
