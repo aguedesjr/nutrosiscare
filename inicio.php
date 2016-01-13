@@ -25,7 +25,7 @@
     <br><br><br>
     
     <center><img src="imagens/principal1.png" /></center>
-    <br><br><br>
+    <br><br>
     
     <div class="grid">
         <div class="row">
@@ -40,6 +40,7 @@
         </div>
     </div>
 
+<br>
 </body>
 <!-- FIM DO ARQUIVO -->
 
