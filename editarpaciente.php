@@ -11,7 +11,7 @@ if (isset($_GET["codigo"])){
 }};
 
 //$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';";
-$resultadoeditpac = mysql_query("SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';");
+$resultadoeditpac = mysql_query("SELECT nome FROM pacientes WHERE codigo = '$codigo';");
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
 
