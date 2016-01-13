@@ -5,9 +5,9 @@
 <?
 
 if (isset($_GET["codigo"])){
-    $codigo = utf8_decode($_GET["codigo"]);
+    $codigo = $_GET["codigo"];
 }else {if (isset($_POST["codigo"])){
-    $codigo = utf8_decode($_POST["codigo"]);
+    $codigo = $_POST["codigo"];
 }};
 
 $sql = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo'";
@@ -269,6 +269,7 @@ else { ?>
                         <div class="panel-content">
                             Não foi possível localizar o paciente.
                             Codigo = <? echo $codigo;?>
+                            Linhas = <? echo $linhas;?>
                         </div>
                     </div><br />
                     <center>
