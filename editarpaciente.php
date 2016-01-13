@@ -269,7 +269,7 @@ else { ?>
                         <div class="panel-content">
                             Não foi possível localizar o paciente.
                             Codigo = <? echo $codigo;?>
-                            Linhas = <? echo $linhaseditpac;?>
+                            Linhas = <? echo $resultadoeditpac;?>
                         </div>
                     </div><br />
                     <center>
