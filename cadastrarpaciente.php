@@ -23,16 +23,16 @@
         //}
         
         function valida(form) {
-            if (form.nome.value=="") {
-                alert("Nome não informado!!");
-                document.getElementById("divnome").className = "input-control text error-state";
-                form.nome.focus();
-                return false;
-            }
+            //if (form.nome.value=="") {
+                //alert("Nome não informado!!");
+                //document.getElementById("divnome").className = "input-control text error-state";
+                //form.nome.focus();
+                //return false;
+            //}
             
-            if (form.nome.value!="") {
-                document.getElementById("divnome").className = "input-control text";
-            }
+            //if (form.nome.value!="") {
+                //document.getElementById("divnome").className = "input-control text";
+            //}
             
             var str = document.getElementById("cpf").value;
             
@@ -150,7 +150,7 @@
                             </div>
                             <label>Nome</label>
                             <div class="input-control text" id="divnome" data-role="input-control">
-                                <input type="text" id="nome" name="nome" placeholder="Nome do Paciente" autofocus>
+                                <input type="text" id="nome" name="nome" placeholder="Nome do Paciente" autofocus required>
                             </div>
                             <table><tr>
                             <!-- <td bgcolor="#FDFDFD">
