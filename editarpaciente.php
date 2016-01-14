@@ -11,7 +11,7 @@ if (isset($_GET["codigo"])){
 }};
 
 //$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';";
-$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular FROM pacientes WHERE codigo = '$codigo';");
+$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular, id FROM pacientes WHERE codigo = '$codigo';");
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
 
@@ -74,7 +74,7 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
             <div class="span1"></div>
             <div class="span10">
                 <form method="POST" onsubmit="return valida(this);" action="editarpacientebd.php" name="editarpaciente" id="editarpaciente">
-                <input type="hidden" id="id" name="id" value="<? echo $resulteditpac[9]?>">
+                <input type="hidden" id="id" name="id" value="<? echo $resulteditpac[5]?>">
                 <div class="editpaciente">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
