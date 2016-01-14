@@ -76,10 +76,10 @@ if (isset($_GET["estado"])){
 }};
 if (isset($_GET["data"])){
   $data = $_GET["data"];
-  $data = implode("-", array_reverse(explode("/", $data)));
+  $datan = implode("-", array_reverse(explode("/", $data)));
 }else {if (isset($_POST["data"])){
   $data = $_POST["data"];
-  $data = implode("-", array_reverse(explode("/", $data)));
+  $datan = implode("-", array_reverse(explode("/", $data)));
 }};
 if (isset($_GET["id"])){
   $id = $_GET["id"];
@@ -97,7 +97,7 @@ if (isset($_GET["profissao"])){
 	$profissao = utf8_decode($_POST["profissao"]);
 }};
 
-$sql = "UPDATE pacientes SET nome='$nome', convenio='$convenio', profissao='$profissao', data='$data', email='$email', endereco='$endereco', cep='$cep', bairro='$bairro', telefone='$tel', celular='$cel', cidade='$cidade', estado='$estado' WHERE id = '$id';";
+$sql = "UPDATE pacientes SET nome='$nome', convenio='$convenio', profissao='$profissao', data='$datan', email='$email', endereco='$endereco', cep='$cep', bairro='$bairro', telefone='$tel', celular='$cel', cidade='$cidade', estado='$estado' WHERE id = '$id';";
 
 // Executa o comando SQL
 mysql_query($sql);

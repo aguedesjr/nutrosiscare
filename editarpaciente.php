@@ -90,7 +90,7 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
                             </div>
                             <label>Nome</label>
                             <div class="input-control text" id="divnome" data-role="input-control">
-                                <input type="text" id="nome" name="nome" value="<? echo utf8_encode($resulteditpac[0])?>" placeholder="Nome do Paciente">
+                                <input type="text" id="nome" name="nome" value="<? echo utf8_encode($resulteditpac[0])?>" placeholder="Nome do Paciente" autofocus required>
                             </div>
                             <table><tr>
                             <!-- <td bgcolor="#FDFDFD">
@@ -107,7 +107,7 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
                                 <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="convenio" name="convenio" value="<? echo utf8_encode($resulteditpac[2])?>" placeholder="Convênio">
+                                    <input type="text" id="convenio" name="convenio" value="<? echo utf8_encode($resulteditpac[2])?>" placeholder="Convênio" required>
                                 </div></td>
                             </tr></table>
                             <table><tr>
