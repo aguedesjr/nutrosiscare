@@ -11,7 +11,7 @@ if (isset($_GET["codigo"])){
 }};
 
 //$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';";
-$resultadoeditpac = mysql_query("SELECT nome, data, convenio FROM pacientes WHERE codigo = '$codigo';");
+$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular FROM pacientes WHERE codigo = '$codigo';");
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
 
@@ -114,13 +114,13 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
                                 <td bgcolor="#FDFDFD">
                                     <label>Telefone</label>
                                     <div class="input-control text size3" data-role="input-control">
-                                        <input type="text" id="tel" name="tel" value="<? echo utf8_encode($resulteditpac[4])?>" placeholder="Telefone">
+                                        <input type="text" id="tel" name="tel" value="<? echo utf8_encode($resulteditpac[3])?>" placeholder="Telefone">
                                     </div>
                                 </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
                                     <label>Celular</label>
                                     <div class="input-control text size3" data-role="input-control">
-                                        <input type="text" id="cel" name="cel" value="<? echo utf8_encode($resulteditpac[5])?>" placeholder="Celular">
+                                        <input type="text" id="cel" name="cel" value="<? echo utf8_encode($resulteditpac[4])?>" placeholder="Celular">
                                     </div>
                                 </td> 
                             </tr></table><br />
