@@ -150,7 +150,7 @@
                             </div>
                             <label>Nome</label>
                             <div class="input-control text" id="divnome" data-role="input-control">
-                                <input type="text" id="nome" name="nome" placeholder="Nome do Paciente">
+                                <input type="text" id="nome" name="nome" placeholder="Nome do Paciente" autofocus>
                             </div>
                             <table><tr>
                             <!-- <td bgcolor="#FDFDFD">
@@ -167,7 +167,7 @@
                                 <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="convenio" name="convenio" placeholder="Convênio">
+                                    <input type="text" id="convenio" name="convenio" placeholder="Convênio" required>
                                 </div></td>
                             </tr></table>
                             <table><tr>

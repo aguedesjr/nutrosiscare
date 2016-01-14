@@ -11,7 +11,7 @@ if (isset($_GET["codigo"])){
 }};
 
 //$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';";
-$resultadoeditpac = mysql_query("SELECT nome, data FROM pacientes WHERE codigo = '$codigo';");
+$resultadoeditpac = mysql_query("SELECT nome, data, convenio FROM pacientes WHERE codigo = '$codigo';");
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
 
@@ -107,7 +107,7 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
                                 <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="convenio" name="convenio" value="<? echo utf8_encode($resulteditpac[10])?>" placeholder="Convênio">
+                                    <input type="text" id="convenio" name="convenio" value="<? echo utf8_encode($resulteditpac[2])?>" placeholder="Convênio">
                                 </div></td>
                             </tr></table>
                             <table><tr>
