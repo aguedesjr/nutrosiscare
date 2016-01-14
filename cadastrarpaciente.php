@@ -162,7 +162,7 @@
                             <td bgcolor="#FDFDFD">
                                 <label>Data Nasc.</label>
                                 <div class="input-control text size2" data-role="input-control">
-                                    <input type="text" id="data" name="data" placeholder="Data" required>
+                                    <input type="text" id="data" name="data" placeholder="Data">
                                 </div></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
