@@ -11,7 +11,7 @@ if (isset($_GET["codigo"])){
 }};
 
 //$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';";
-$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular, id FROM pacientes WHERE codigo = '$codigo';");
+$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular, id, cep, bairro, endereco, cidade, estado FROM pacientes WHERE codigo = '$codigo';");
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
 
@@ -144,30 +144,30 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
                             <td bgcolor="#FDFDFD">
                                 <label>CEP</label>
                                 <div class="input-control text size2" data-role="input-control">
-                                    <input type="text" id="cep" name="cep" maxlength="9" value="<? echo utf8_encode($resulteditpac[2])?>" placeholder="Informe o CEP">
+                                    <input type="text" id="cep" name="cep" maxlength="9" value="<? echo utf8_encode($resulteditpac[6])?>" placeholder="Informe o CEP">
                                 </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <label>Bairro</label>
                                 <div class="input-control text size4" data-role="input-control">
-                                    <input type="text" id="bairro" name="bairro" value="<? echo utf8_encode($resulteditpac[3])?>" placeholder="Bairro">
+                                    <input type="text" id="bairro" name="bairro" value="<? echo utf8_encode($resulteditpac[7])?>" placeholder="Bairro">
                                 </div></td>
                             </tr></table>
                             <label>Rua</label>
                             <div class="input-control text size6" data-role="input-control">
-                                <input type="text" id="rua" name="rua" value="<? echo utf8_encode($resulteditpac[1])?>" placeholder="Nome da Rua / Logradouro">
+                                <input type="text" id="rua" name="rua" value="<? echo utf8_encode($resulteditpac[8])?>" placeholder="Nome da Rua / Logradouro">
                             </div>
                             <table><tr>
                                 <td bgcolor="#FDFDFD">
                                     <label>Cidade</label>
                                     <div class="input-control text size5" data-role="input-control">
-                                        <input type="text" id="cidade" name="cidade" value="<? echo utf8_encode($resulteditpac[6])?>" placeholder="Cidade">
+                                        <input type="text" id="cidade" name="cidade" value="<? echo utf8_encode($resulteditpac[9])?>" placeholder="Cidade">
                                     </div>
                                 </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
                                     <label>UF</label>
                                     <div class="input-control text size1" data-role="input-control">
-                                        <input type="text" id="estado" name="estado" value="<? echo utf8_encode($resulteditpac[7])?>" placeholder="Estado">
+                                        <input type="text" id="estado" name="estado" value="<? echo utf8_encode($resulteditpac[10])?>" placeholder="Estado">
                                     </div>
                                 </td> 
                             </tr></table><br />
