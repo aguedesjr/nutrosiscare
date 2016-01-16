@@ -32,6 +32,16 @@ include ("header.php");
                             <div class="frames">
                                 <div class="frame" id="_page_1">
                                     <table>
+                                    	<tr>
+                                    		<td bgcolor="#FDFDFD">
+                                    			<label>Nome</label>
+					                            <div class="input-control text" id="divnome" data-role="input-control">
+					                                <input type="text" id="nome" name="nome" placeholder="Nome do Paciente" autofocus required>
+					                            </div>
+                                    		</td>
+                                    	</tr>
+                                    </table><br>
+                                    <table>
                                         <tr>
                                             <td bgcolor="#FDFDFD">
                                                 <label>Data</label>
