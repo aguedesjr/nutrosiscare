@@ -8945,6 +8945,44 @@ a {
   transform: rotate(-90deg);
 }
 
+.metro .recibo {
+  padding: 20px 40px 20px 60px;
+  border: 1px #ccc solid;
+  position: relative;
+  margin: 0 0 10px 0;
+  background-color: #fdfdfd !important;
+  min-height: 100px;
+}
+.metro .recibo:before,
+.metro .recibo:after {
+  display: table;
+  content: "";
+}
+.metro .recibo:after {
+  clear: both;
+}
+.metro .recibo:before {
+  position: absolute;
+  content: "Recibo";
+  left: -10px;
+  top: 40px;
+  color: #999999 !important;
+  margin: 5px 10px;
+  font-family: 'Segoe UI Semibold_', 'Open Sans Bold', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.02em;
+  color: #000000;
+  font-size: 1.2rem; /*tamanho da fonte do texto lateral*/
+  line-height: 1.4rem;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 .metro .agenda {
   padding: 20px 40px 20px 60px;
   border: 1px #ccc solid;
