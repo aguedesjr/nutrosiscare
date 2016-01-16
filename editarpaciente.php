@@ -11,7 +11,7 @@ if (isset($_GET["codigo"])){
 }};
 
 //$sqleditpac = "SELECT data, endereco, cep, bairro, telefone, celular, cidade, estado, nome, id, convenio, profissao, email FROM pacientes WHERE codigo = '$codigo';";
-$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular, id, cep, bairro, endereco, cidade, estado FROM pacientes WHERE codigo = '$codigo';");
+$resultadoeditpac = mysql_query("SELECT nome, data, convenio, telefone, celular, id, cep, bairro, endereco, cidade, estado, profissao, email FROM pacientes WHERE codigo = '$codigo';");
 $resulteditpac = mysql_fetch_array($resultadoeditpac);
 $linhaseditpac = mysql_num_rows($resultadoeditpac);
 
@@ -169,7 +169,7 @@ $datan = implode("/", array_reverse(explode("-", $resulteditpac[1])));
                                     <div class="input-control select">
                                                     <select name="estado">
                                                         <option value=<? echo utf8_encode($resulteditpac[10])?>><? echo utf8_encode($resulteditpac[10])?></option>
-                                                        <option value=""></option>
+                                                        <option value="">----</option>
                                                         <option value="AC">AC</option> 
 														<option value="AL">AL</option> 
 														<option value="AM">AM</option> 
