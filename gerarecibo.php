@@ -28,5 +28,5 @@ $pdf->SetTextColor(255, 0, 0);
 $pdf->SetXY(70, 70);
 $pdf->Write(0, 'This is just a simple text');
 
-$pdf->Output();
+$pdf->Output("recibo.pdf",D);
 ?>
