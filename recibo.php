@@ -122,7 +122,7 @@ include ("header.php");
             <? include ("menu.php"); ?>
             <div class="span1"></div>
             <div class="span10">
-                <form method="POST" action="gerarecibo.php" name="recibo">
+                <form method="POST" onsubmit="return valida(this);" action="gerarecibo.php" name="recibo">
                     <div class="recibo">
                         <div class="tab-control" data-role="tab-control">
                             <ul class="tabs">
@@ -138,10 +138,11 @@ include ("header.php");
 					                                <input type="text" id="nome" name="nome" placeholder="Nome do Paciente" autofocus required>
 					                            </div>
                                     		</td>
+                                    		<td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                     		<td bgcolor="#FDFDFD">
                                     			<label>CPF</label>
 				                                <div class="input-control text size2" id="divcpf" data-role="input-control">
-				                                    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Informe o CPF">
+				                                    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Informe o CPF" required>
 				                                </div>
                                     		</td>
                                     	</tr>
