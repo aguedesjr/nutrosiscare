@@ -6,12 +6,17 @@ include ("header.php");
 ?>
 
 <script src="js/jquery.maskedinput.js" type="text/javascript"></script> <!-- SCRIPT MASK -->
+<<script src="js/jquery.maskMoney.min.js" type="text/javascript"></script> <!-- SCRIPT MONEY -->
+<!--
+
+//-->
+</script>
 
 <script>
         $(function() {
             jQuery(function($){
                 $("#cpf").mask("999.999.999-99");
-                
+                $("#valor").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
             });
         });
         
@@ -158,15 +163,10 @@ include ("header.php");
                                             </td>
                                             <td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                             <td bgcolor="#FDFDFD">
-                                                <label>Profissional</label>
-                                                <div class="input-control select">
-                                                    <select name="profissional">
-                                                        <option value="">SELECIONE</option>
-                                                        <? while ($linhasp = mysql_fetch_array($resultadop, MYSQL_NUM)){ ?>
-                                                        <option value=<? echo $linhasp[0];?>><? echo utf8_encode($linhasp[1]);?></option>
-                                                        <?};?>
-                                                    </select>
-                                                </div>
+                                                <label>Valor</label>
+                                                <div class="input-control text" data-role="input-control">
+				                                    <input type="text" id="valor" name="valor" placeholder="Informe o Valor" required>
+				                                </div>
                                             </td>
                                         </tr>
                                     </table><br />
