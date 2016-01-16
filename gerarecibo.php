@@ -23,10 +23,9 @@ $tplIdx = $pdf->importPage(1);
 $pdf->useTemplate($tplIdx, 0, 0, 210);
 
 // now write some text above the imported page
-$pdf->SetFont('Helvetica');
-$pdf->SetTextColor(255, 0, 0);
-$pdf->SetXY(70, 70);
-$pdf->Write(0, 'This is just a simple text');
+$pdf->SetFont('Arial','U',10);
+$pdf->Cell(20);
+$pdf->MultiCell(50,50,'This is just a simple text',1,J);
 
 $pdf->Output("recibo.pdf",D);
 ?>
