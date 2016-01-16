@@ -54,12 +54,12 @@
                         <!-- SOMENTE ACESSO DO ADMIN -->
                         <? if ($_SESSION['perfil'] == "ADMIN"){?>
                         <li class="stick bg-yellow">
-                            <a class="dropdown-toggle" href="#"><i class="icon-heart-2"></i>Fichas Médicas</a>
+                            <a class="dropdown-toggle" href="#"><i class="icon-heart"></i>Fichas Médicas</a>
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="fichaanaminese.php"><i class="icon-stats"></i>Anaminese</a></li>
                                 <!-- <li><a href="fichabuscaprocedimentomedicomedico.php"><i class="icon-copy"></i>Procedimentos</a></li>-->
                                 <li><a href="fichareceituario.php"><i class="icon-clipboard-2"></i>Receituário</a></li>
-                                <li><a href="fichareceituario.php"><i class="icon-clipboard-2"></i>Recibo</a></li>
+                                <li><a href="recibo.php"><i class="icon-dollar"></i>Recibo</a></li>
                             </ul>
                         </li>
                         <!-- <li class="stick bg-steel">
