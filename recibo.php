@@ -170,6 +170,16 @@ include ("header.php");
                                             </td>
                                         </tr>
                                     </table><br />
+                                                                        <table>
+                                        <tr>
+                                            <td bgcolor="#FDFDFD">
+                                                <label>Valor Nominal</label>
+                                                <div class="input-control text" data-role="input-control">
+				                                    <input type="text" id="valorex" name="valorex" placeholder="Informe o Valor Nominal" required>
+				                                </div>
+                                            </td>
+                                        </tr>
+                                    </table><br />
                                     <center>
                                         <button type="submit" class="image-button primary image-left">
                                             Imprimir
