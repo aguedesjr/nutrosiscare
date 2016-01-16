@@ -172,8 +172,8 @@ include ("header.php");
                                     </table><br />
                                     <center>
                                         <button type="submit" class="image-button primary image-left">
-                                            Procurar
-                                            <i class="icon-search on-left" style="top: -3px; left: 7px">
+                                            Imprimir
+                                            <i class="icon-printer on-left" style="top: -3px; left: 7px">
                                             </i>
                                         </button>
                                     </center>
