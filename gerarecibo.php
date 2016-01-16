@@ -24,6 +24,7 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 
 // now write some text above the imported page
 $pdf->SetFont('Arial','U',10);
+$pdf->Ln(30);
 $pdf->Cell(20);
 $pdf->MultiCell(50,50,'This is just a simple text',1,J);
 
