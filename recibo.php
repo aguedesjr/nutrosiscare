@@ -155,23 +155,12 @@ include ("header.php");
                                     <table>
                                         <tr>
                                             <td bgcolor="#FDFDFD">
-                                                <label>Data</label>
-                                                <div class="input-control text" id="datepicker">
-                                                    <input type="text" name="data" placeholder="Data">
-                                                    <button class="btn-date"></button>
-                                                </div>
-                                            </td>
-                                            <td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
-                                            <td bgcolor="#FDFDFD">
                                                 <label>Valor</label>
                                                 <div class="input-control text" data-role="input-control">
 				                                    <input type="text" id="valor" name="valor" placeholder="Informe o Valor" required>
 				                                </div>
                                             </td>
-                                        </tr>
-                                    </table><br />
-                                                                        <table>
-                                        <tr>
+                                            <td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                             <td bgcolor="#FDFDFD">
                                                 <label>Valor Nominal</label>
                                                 <div class="input-control text size6" data-role="input-control">
