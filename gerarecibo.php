@@ -20,7 +20,7 @@ $pdf->setSourceFile("fpdi/timbre.pdf");
 // import page 1
 $tplIdx = $pdf->importPage(1);
 // use the imported page and place it at point 10,10 with a width of 100 mm
-$pdf->useTemplate($tplIdx, 10, 10, 210);
+$pdf->useTemplate($tplIdx, 0, 0, 210);
 
 // now write some text above the imported page
 $pdf->SetFont('Helvetica');
