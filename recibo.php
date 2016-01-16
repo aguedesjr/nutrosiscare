@@ -174,7 +174,7 @@ include ("header.php");
                                         <tr>
                                             <td bgcolor="#FDFDFD">
                                                 <label>Valor Nominal</label>
-                                                <div class="input-control text" data-role="input-control">
+                                                <div class="input-control text size6" data-role="input-control">
 				                                    <input type="text" id="valorex" name="valorex" placeholder="Informe o Valor Nominal" required>
 				                                </div>
                                             </td>
