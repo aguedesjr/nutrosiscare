@@ -26,7 +26,7 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 $pdf->SetFont('Arial','U',10);
 $pdf->Ln(60);
 $pdf->Cell(20);
-$pdf->MultiCell(180,10,'This is just a simple text',1,J);
+$pdf->MultiCell(160,10,'This is just a simple text',1,J);
 
 $pdf->Output("recibo.pdf",D);
 ?>
