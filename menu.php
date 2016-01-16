@@ -5,13 +5,13 @@
                     <ul>
                         <li class="title"><center>Menu</center></li>
                         <li class=""><a href="inicio.php"><i class="icon-home"></i>Inicio</a></li>
-                        <li class="stick bg-red"><a class="dropdown-toggle" href="#"><i class="icon-calendar"></i>Agenda</a>
+                        <li class="stick bg-darkCrimson"><a class="dropdown-toggle" href="#"><i class="icon-calendar"></i>Agenda</a>
                         	<ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="agenda.php"><i class="icon-file"></i>Novo</a></li>
                                 <li><a href="buscarpacienteagenda.php"><i class="icon-search"></i>Buscar</a></li>
                             </ul>
                         </li>
-                        <li class="stick bg-orange"><a class="dropdown-toggle" href="#"><i class="icon-user-2"></i>Pacientes</a>
+                        <li class="stick bg-red"><a class="dropdown-toggle" href="#"><i class="icon-user-2"></i>Pacientes</a>
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="cadastrarpaciente.php"><i class="icon-file"></i>Cadastrar</a></li>
                                 <li><a href="buscarpaciente.php"><i class="icon-pencil"></i>Editar</a></li>
@@ -53,7 +53,7 @@
                         </li> -->
                         <!-- SOMENTE ACESSO DO ADMIN -->
                         <? if ($_SESSION['perfil'] == "ADMIN"){?>
-                        <li class="stick bg-yellow">
+                        <li class="stick bg-orange">
                             <a class="dropdown-toggle" href="#"><i class="icon-heart"></i>Fichas Médicas</a>
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="fichaanaminese.php"><i class="icon-stats"></i>Anaminese</a></li>
@@ -62,7 +62,7 @@
                                 <li><a href="recibo.php"><i class="icon-dollar"></i>Recibo</a></li>
                             </ul>
                         </li>
-                        <li class="stick bg-darkyellow">
+                        <li class="stick bg-yellow">
                             <a class="dropdown-toggle" href="#"><i class="icon-heart"></i>Fichas Médicas</a>
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="fichaanaminese.php"><i class="icon-stats"></i>Anaminese</a></li>
