@@ -18,6 +18,14 @@ include ("header.php");
                 $("#cpf").mask("999.999.999-99");
                 $("#valor").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
             });
+
+            $("#datepicker").datepicker({
+                //date: "2013-01-01", // set init date
+                format: "dd/mm/yyyy", // set output format
+                effect: "slide", // none, slide, fade
+                position: "bottom", // top or bottom,
+                locale: 'pt', // 'ru' or 'en', default is $.Metro.currentLocale (metro-locale.js)
+            });
         });
         
         //function zerar() {
@@ -150,6 +158,14 @@ include ("header.php");
 				                                    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Informe o CPF" required>
 				                                </div>
                                     		</td>
+                                    		<td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                                    		<td bgcolor="#FDFDFD">
+                                                <label>Data</label>
+                                                <div class="input-control text" id="datepicker">
+                                                    <input type="text" name="data" placeholder="Data">
+                                                    <button class="btn-date"></button>
+                                                </div>
+                                            </td>
                                     	</tr>
                                     </table><br>
                                     <table>

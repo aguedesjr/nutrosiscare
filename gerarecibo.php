@@ -36,8 +36,16 @@ if (isset($_GET["valorex"])){
 	$valorex = utf8_decode($_POST["valorex"]);
 }};
 
+if (isset($_GET["data"])){
+	$datan = $_GET["data"];
+	$datan = implode("-", array_reverse(explode("/", $data)));
+}else {if (isset($_POST["data"])){
+	$datan = $_POST["data"];
+	$datan = implode("-", array_reverse(explode("/", $data)));
+}};
+
 // Salva as informações no banco de dados
-$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex) VALUES ('$nome', '$cpf', '$valor', '$valorex');";
+$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
 mysql_query($sqli);
 
 // initiate FPDI
