@@ -36,6 +36,10 @@ if (isset($_GET["valorex"])){
 	$valorex = utf8_decode($_POST["valorex"]);
 }};
 
+// Salva as informações no banco de dados
+$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex) VALUES ('$nome', '$cpf', '$valor', '$valorex');";
+mysql_query($sqli);
+
 // initiate FPDI
 $pdf = new FPDI();
 // add a page
@@ -66,5 +70,5 @@ $pdf->Ln(5);
 $pdf->Cell(80);
 $pdf->Cell(20,10,'CPF: 030.771.727-55');
 
-$pdf->Output("recibo.pdf",D);
+$pdf->Output("recibo_".$nome.".pdf",D);
 ?>
