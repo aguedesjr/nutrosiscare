@@ -11,6 +11,19 @@ require_once ("fpdi/fpdi.php");
 //Caminho do arquivo de fontes para o FPDF
 define('FPDF_FONTPATH','fpdf16/font/');
 
+// Recebe os valores que vem da pagina recibo.php
+if (isset($_GET["nome"])){
+	$nome = utf8_decode($_GET["nome"]);
+}else {if (isset($_POST["nome"])){
+	$nome = utf8_decode($_POST["nome"]);
+}};
+
+if (isset($_GET["cpf"])){
+	$cpf = utf8_decode($_GET["cpf"]);
+}else {if (isset($_POST["nome"])){
+	$cpf = utf8_decode($_POST["cpf"]);
+}};
+
 // initiate FPDI
 $pdf = new FPDI();
 // add a page
@@ -26,7 +39,7 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 $pdf->SetFont('Arial','U',10);
 $pdf->Ln(60);
 $pdf->Cell(20);
-$pdf->MultiCell(150,10,'This is just a simple text bbbbbbbbbbb bbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbb',1,J);
+$pdf->MultiCell(150,10,'Recebi de '.$nome.' CPF '.$cpf.'bbbbbbbbbbb bbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbb',1,J);
 
 $pdf->Output("recibo.pdf",D);
 ?>
