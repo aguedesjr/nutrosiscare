@@ -24,6 +24,18 @@ if (isset($_GET["cpf"])){
 	$cpf = utf8_decode($_POST["cpf"]);
 }};
 
+if (isset($_GET["valor"])){
+	$valor = utf8_decode($_GET["valor"]);
+}else {if (isset($_POST["valor"])){
+	$valor = utf8_decode($_POST["valor"]);
+}};
+
+if (isset($_GET["valorex"])){
+	$valorex = utf8_decode($_GET["valorex"]);
+}else {if (isset($_POST["valorex"])){
+	$valorex = utf8_decode($_POST["valorex"]);
+}};
+
 // initiate FPDI
 $pdf = new FPDI();
 // add a page
@@ -39,7 +51,7 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 $pdf->SetFont('Arial','U',10);
 $pdf->Ln(60);
 $pdf->Cell(20);
-$pdf->MultiCell(150,10,'Recebi de '.$nome.' CPF '.$cpf.'bbbbbbbbbbb bbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbb',1,J);
+$pdf->MultiCell(150,10,'Recebi de '.$nome.' ,CPF '.$cpf.' ,a importância de R$'.$valor.' ('.$valorex.')',1,J);
 
 $pdf->Output("recibo.pdf",D);
 ?>
