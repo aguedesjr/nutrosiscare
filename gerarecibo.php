@@ -52,7 +52,7 @@ $pdf->SetFont('Arial','B',14);
 $pdf->Ln(60);
 $pdf->Cell(85);
 $pdf->Cell(20,10,'RECIBO');
-$pdf->SetFont('Arial','U',10);
+$pdf->SetFont('Arial','',10);
 $pdf->Ln(20);
 $pdf->Cell(20);
 $pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',0,J);
