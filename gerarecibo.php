@@ -51,7 +51,7 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 $pdf->SetFont('Arial','U',10);
 $pdf->Ln(60);
 $pdf->Cell(20);
-$pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',1,J);
+$pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',0,J);
 
 $pdf->Output("recibo.pdf",D);
 ?>
