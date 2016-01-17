@@ -57,5 +57,5 @@ $pdf->Ln(20);
 $pdf->Cell(20);
 $pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',0,J);
 
-$pdf->Output("recibo.pdf");
+$pdf->Output("recibo.pdf",D);
 ?>
