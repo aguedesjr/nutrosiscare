@@ -50,12 +50,12 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 // now write some text above the imported page
 $pdf->SetFont('Arial','B',14);
 $pdf->Ln(60);
-$pdf->Cell(90);
+$pdf->Cell(85);
 $pdf->Cell(20,10,'RECIBO');
 $pdf->SetFont('Arial','U',10);
 $pdf->Ln(20);
 $pdf->Cell(20);
 $pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',0,J);
 
-$pdf->Output("recibo.pdf",D);
+$pdf->Output("recibo.pdf");
 ?>
