@@ -59,11 +59,11 @@ $pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.
 $pdf->Ln(140);
 $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
-$pdf->Ln(3);
-$pdf->Cell(55);
-$pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
-$pdf->Ln(3);
+$pdf->Ln(5);
 $pdf->Cell(65);
+$pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
+$pdf->Ln(5);
+$pdf->Cell(75);
 $pdf->Cell(20,10,'CPF: 030.771.727-55');
 
 $pdf->Output("recibo.pdf",D);
