@@ -48,6 +48,10 @@ $tplIdx = $pdf->importPage(1);
 $pdf->useTemplate($tplIdx, 0, 0, 210);
 
 // now write some text above the imported page
+$pdf->SetFont('Arial','B',14);
+$pdf->Ln(60);
+$pdf->Cell(50);
+$pdf->Cell(20,10,'Recibo');
 $pdf->SetFont('Arial','U',10);
 $pdf->Ln(60);
 $pdf->Cell(20);
