@@ -63,7 +63,7 @@ $pdf->Ln(5);
 $pdf->Cell(65);
 $pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
 $pdf->Ln(5);
-$pdf->Cell(75);
+$pdf->Cell(80);
 $pdf->Cell(20,10,'CPF: 030.771.727-55');
 
 $pdf->Output("recibo.pdf",D);
