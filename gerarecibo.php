@@ -67,7 +67,7 @@ $pdf->Cell(20,10,'RECIBO');
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(20);
 $pdf->Cell(20);
-$pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',0,J);
+$pdf->MultiCell(150,10,utf8_decode('Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.'),0,J);
 $pdf->SetY(250);
 $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
