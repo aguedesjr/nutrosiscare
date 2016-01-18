@@ -6,7 +6,7 @@ include ("header.php");
 ?>
 
 <script src="js/jquery.maskedinput.js" type="text/javascript"></script> <!-- SCRIPT MASK -->
-<<script src="js/jquery.maskMoney.min.js" type="text/javascript"></script> <!-- SCRIPT MONEY -->
+<script src="js/jquery.maskMoney.min.js" type="text/javascript"></script> <!-- SCRIPT MONEY -->
 <!--
 
 //-->
