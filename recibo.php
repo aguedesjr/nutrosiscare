@@ -155,7 +155,7 @@ include ("header.php");
                                     		<td bgcolor="#FDFDFD">
                                     			<label>CPF</label>
 				                                <div class="input-control text size2" id="divcpf" data-role="input-control">
-				                                    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Informe o CPF">
+				                                    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Informe o CPF" required>
 				                                </div>
                                     		</td>
                                     		<td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
