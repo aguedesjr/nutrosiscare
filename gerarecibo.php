@@ -38,13 +38,13 @@ if (isset($_GET["valorex"])){
 
 if (isset($_GET["data"])){
 	$datan = $_GET["data"];
-	$datan = implode("-", array_reverse(explode("/", $data)));
+	$datan = implode("-", array_reverse(explode("/", $datan)));
 }else {if (isset($_POST["data"])){
 	$datan = $_POST["data"];
-	$datan = implode("-", array_reverse(explode("/", $data)));
+	$datan = implode("-", array_reverse(explode("/", $datan)));
 }};
 
-// Salva as informações no banco de dados
+// Salva as informaï¿½ï¿½es no banco de dados
 $sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
 mysql_query($sqli);
 
@@ -67,7 +67,7 @@ $pdf->Cell(20,10,'RECIBO');
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(20);
 $pdf->Cell(20);
-$pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.',0,J);
+$pdf->MultiCell(150,10,'Recebi de '.$nome.', CPF '.$cpf.', a importï¿½ncia de R$'.$valor.' ('.$valorex.') referente ï¿½ consulta mï¿½dica.',0,J);
 $pdf->SetY(250);
 $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
