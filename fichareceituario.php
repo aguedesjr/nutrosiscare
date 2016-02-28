@@ -96,6 +96,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                         <li class="active"><a href="#_page_1">Dados Pessoais</a></li>
                         <li class=""><a href="#_page_2">Informações</a></li>
                         <li class=""><a href="#_page_3">Dieta</a></li>
+                        <li class=""><a href="#_page_3">Conduta</a></li>
                     </ul>
                     <div class="frames">
                         <div class="frame" id="_page_1">
@@ -317,6 +318,32 @@ $resultpac = mysql_fetch_array($resultadopac);
                             <label>Não Gosta</label>
                             <div class="input-control textarea" data-role="input-control">
                                 <textarea name="naogosta" placeholder="Não Gosta"></textarea>
+                            </div>
+							<br>
+                            
+                            <center>
+                                
+                                <button type="submit" class="image-button primary image-left">
+                                    Salvar
+                                    <i class="icon-floppy on-left" style="top: -3px; left: 7px">
+                                    </i>
+                                </button>
+                                <!--<button type="button" onclick="zerar();" class="image-button danger image-left">
+                                    Limpar
+                                    <i class="icon-spin on-left" style="top: -2px; left: 7px">
+                                    </i>
+                                </button>-->
+                                
+                            </center>
+                        </div>
+                        <div class="frame" id="_page_4">
+                            <label>Conduta</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="conduta" placeholder="Conduta"></textarea>
+                            </div>
+                            <label>Observação</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="obs" placeholder="Observação"></textarea>
                             </div>
 							<br>
                             
