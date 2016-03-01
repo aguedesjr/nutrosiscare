@@ -30,6 +30,7 @@ $(function() {
     <br>
 
     <img src="imagens/photo1.jpg" />
+    <br><br><br>
     
     <center><img src="imagens/principal1.png" /></center>
     <br><br>
