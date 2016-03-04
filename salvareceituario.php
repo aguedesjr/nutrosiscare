@@ -30,10 +30,10 @@ if (isset($_GET["valor"])){
 	$valor = utf8_decode($_POST["valor"]);
 }};
 
-if (isset($_GET["valorex"])){
-	$valorex = utf8_decode($_GET["valorex"]);
-}else {if (isset($_POST["valorex"])){
-	$valorex = utf8_decode($_POST["valorex"]);
+if (isset($_GET["cafe"])){
+	$cafe = utf8_decode($_GET["cafe"]);
+}else {if (isset($_POST["cafe"])){
+	$cafe = utf8_decode($_POST["cafe"]);
 }};
 
 if (isset($_GET["data"])){
@@ -64,9 +64,14 @@ $pdf->SetFont('Arial','B',14);
 $pdf->Ln(60);
 $pdf->Cell(85);
 $pdf->Cell(20,10,'DIETA');
-$pdf->SetFont('Arial','',10);
-$pdf->Ln(20);
+$pdf->SetFont('Arial','B',12);
+$pdf->Ln(15);
 $pdf->Cell(20);
+$pdf->Cell(20,10,'Café da Manhã');
+$pdf->SetFont('Arial','',10);
+$pdf->Ln(10);
+$pdf->Cell(20);
+$pdf->Cell(20,10,utf8_decode($café));
 $pdf->MultiCell(150,10,utf8_decode('Recebi de '.$nome.', CPF '.$cpf.', a importância de R$'.$valor.' ('.$valorex.') referente à consulta médica.'),0,J);
 $pdf->SetY(250);
 $pdf->Cell(45);
