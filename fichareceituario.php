@@ -138,9 +138,9 @@ $resultpac = mysql_fetch_array($resultadopac);
                             
                             <table><tr>
                             <td bgcolor="#FDFDFD">
-                                <label>Peso</label>
+                                <label>Peso Atual</label>
                                 <div class="input-control text size2" data-role="input-control">
-	                                <input type="text" id="peso" name="peso" placeholder="Peso">
+	                                <input type="text" id="pesoatual" name="pesoatual" placeholder="Peso Atual">
 	                            </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
@@ -163,6 +163,24 @@ $resultpac = mysql_fetch_array($resultadopac);
 	                                <input type="text" id="ca" name="ca" placeholder="CA">
 	                            </div>
                             <br></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Peso Usual</label>
+                                <div class="input-control text size2" data-role="input-control">
+	                                <input type="text" id="pesousual" name="pesousual" placeholder="Peso Usual">
+	                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <td bgcolor="#FDFDFD">
+                                    <label>PA</label>
+                                    <div class="input-control text size2" data-role="input-control">
+                                        <input type="text" name="pa" placeholder="PA">
+                                    </div>
+                                </td>
+                                <br /></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
                             </table>
                             
