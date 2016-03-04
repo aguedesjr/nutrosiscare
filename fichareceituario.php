@@ -352,6 +352,22 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </tr>
                             </table>
                             
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Glicose</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="glicose" name="glicose" placeholder="Glicose">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>HB Glicosada</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="hbglicosada" name="hbglicosada" placeholder="HB Glicosada">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
 							<br>
                             
                             <center>
