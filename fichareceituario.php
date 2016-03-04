@@ -89,7 +89,7 @@ $resultpac = mysql_fetch_array($resultadopac);
             <? include ("menu.php"); ?>
             <div class="span1"></div>
             <div class="span10">
-                <form method="POST" onsubmit="return valida(this);" action="salvaautmed.php" name="salvaautorizacaomedica" id="salvaautorizacaomedica">
+                <form method="POST" onsubmit="return valida(this);" action="salvareceituario.php" name="salvareceituario" id="salvareceituario">
                 <div class="receituario">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
@@ -534,38 +534,34 @@ $resultpac = mysql_fetch_array($resultadopac);
                         <div class="frame" id="_page_4">
                             <label>Café da Manhã</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="cafe" placeholder="Café da Manhã"></textarea>
+                                <textarea name="cafeusual" placeholder="Café da Manhã"></textarea>
                             </div>
                             
                             <label>Colação</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="colacao" placeholder="Colação"></textarea>
+                                <textarea name="colacaousual" placeholder="Colação"></textarea>
                             </div>
                             
                             <label>Almoço</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="almoco" placeholder="Almoço"></textarea>
+                                <textarea name="almocousual" placeholder="Almoço"></textarea>
                             </div>
                             
                             <label>Lanche</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="lanche" placeholder="Lanche"></textarea>
+                                <textarea name="lancheusual" placeholder="Lanche"></textarea>
                             </div>
                             
                             <label>Jantar</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="jantar" placeholder="Jantar"></textarea>
+                                <textarea name="jantarusual" placeholder="Jantar"></textarea>
                             </div>
                             
                             <label>Ceia</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="ceia" placeholder="Ceia"></textarea>
+                                <textarea name="ceiausual" placeholder="Ceia"></textarea>
                             </div>
                             
-                            <label>Não Gosta</label>
-                            <div class="input-control textarea" data-role="input-control">
-                                <textarea name="naogosta" placeholder="Não Gosta"></textarea>
-                            </div>
 							<br>
                             
                             <center>
@@ -640,7 +636,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                         <div class="frame" id="_page_6">
                             <label>Conduta</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="conduta" placeholder="Conduta"></textarea>
+                                <textarea name="conduta" placeholder="Conduta" rows="10"></textarea>
                             </div>
                             <label>Observação</label>
                             <div class="input-control textarea" data-role="input-control">
