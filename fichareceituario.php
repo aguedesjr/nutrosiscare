@@ -96,8 +96,9 @@ $resultpac = mysql_fetch_array($resultadopac);
                         <li class="active"><a href="#_page_1">Dados Pessoais</a></li>
                         <li class=""><a href="#_page_2">Informações</a></li>
                         <li class=""><a href="#_page_3">Exames</a></li>
-                        <li class=""><a href="#_page_4">Dieta</a></li>
-                        <li class=""><a href="#_page_5">Conduta</a></li>
+                        <li class=""><a href="#_page_4">Dieta Usual</a></li>
+                        <li class=""><a href="#_page_5">Dieta</a></li>
+                        <li class=""><a href="#_page_6">Conduta</a></li>
                     </ul>
                     <div class="frames">
                         <div class="frame" id="_page_1">
@@ -582,7 +583,61 @@ $resultpac = mysql_fetch_array($resultadopac);
                                 
                             </center>
                         </div>
+                        
                         <div class="frame" id="_page_5">
+                            <label>Café da Manhã</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="cafe" placeholder="Café da Manhã"></textarea>
+                            </div>
+                            
+                            <label>Colação</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="colacao" placeholder="Colação"></textarea>
+                            </div>
+                            
+                            <label>Almoço</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="almoco" placeholder="Almoço"></textarea>
+                            </div>
+                            
+                            <label>Lanche</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="lanche" placeholder="Lanche"></textarea>
+                            </div>
+                            
+                            <label>Jantar</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="jantar" placeholder="Jantar"></textarea>
+                            </div>
+                            
+                            <label>Ceia</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="ceia" placeholder="Ceia"></textarea>
+                            </div>
+                            
+                            <label>Não Gosta</label>
+                            <div class="input-control textarea" data-role="input-control">
+                                <textarea name="naogosta" placeholder="Não Gosta"></textarea>
+                            </div>
+							<br>
+                            
+                            <center>
+                                
+                                <button type="submit" class="image-button primary image-left">
+                                    Salvar
+                                    <i class="icon-floppy on-left" style="top: -3px; left: 7px">
+                                    </i>
+                                </button>
+                                <!--<button type="button" onclick="zerar();" class="image-button danger image-left">
+                                    Limpar
+                                    <i class="icon-spin on-left" style="top: -2px; left: 7px">
+                                    </i>
+                                </button>-->
+                                
+                            </center>
+                        </div>
+                        
+                        <div class="frame" id="_page_6">
                             <label>Conduta</label>
                             <div class="input-control textarea" data-role="input-control">
                                 <textarea name="conduta" placeholder="Conduta"></textarea>
