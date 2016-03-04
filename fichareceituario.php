@@ -432,6 +432,86 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </tr>
                             </table>
                             
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Vitamina D</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="vitaminad" name="vitaminad" placeholder="Vitamina D">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>Vitamina B12</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="vitaminab12" name="vitaminab12" placeholder="Vitamina B12">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Ácido Fólico</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="acidofolico" name="acidofolico" placeholder="Ácido Fólico">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>PTNC</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="ptnc" name="ptnc" placeholder="PTNC">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>VHS</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="vhs" name="vhs" placeholder="VHS">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>Insulina</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="insulina" name="insulina" placeholder="Insulina">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>PTN Total</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="ptntotal" name="ptntotal" placeholder="PTN Total">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>TTOG</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="ttog" name="ttog" placeholder="TTOG">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Albumina</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="albumina" name="albumina" placeholder="Albumina">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>Globulina</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="globulina" name="globulina" placeholder="Globulina">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
 							<br>
                             
                             <center>
