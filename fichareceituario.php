@@ -368,6 +368,54 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </tr>
                             </table>
                             
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>VCM</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="vcm" name="vcm" placeholder="VCM">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>Uréia</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="ureia" name="ureia" placeholder="Uréia">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>TGO</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="tgo" name="tgo" placeholder="TGO">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>TGP</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="tgp" name="tgp" placeholder="TGP">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>CPK</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="cpk" name="cpk" placeholder="CPK">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>Sódio</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="sodio" name="sodio" placeholder="Sódio">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
 							<br>
                             
                             <center>
