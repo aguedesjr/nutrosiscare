@@ -376,9 +376,9 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
-                                <label>Uréia</label>
+                                <label>UrÃ©ia</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="ureia" name="ureia" placeholder="Uréia">
+                                <input type="text" id="ureia" name="ureia" placeholder="UrÃ©ia">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
