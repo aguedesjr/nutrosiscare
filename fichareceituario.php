@@ -408,9 +408,9 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
-                                <label>Sódio</label>
+                                <label>SÃ³dio</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="sodio" name="sodio" placeholder="Sódio">
+                                <input type="text" id="sodio" name="sodio" placeholder="SÃ³dio">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
