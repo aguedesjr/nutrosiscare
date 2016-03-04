@@ -416,6 +416,22 @@ $resultpac = mysql_fetch_array($resultadopac);
                             </tr>
                             </table>
                             
+                            <table><tr>
+                            <td bgcolor="#FDFDFD">
+                                <label>Potássio</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="potassio" name="potassio" placeholder="Potássio">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            <td bgcolor="#FDFDFD">
+                                <label>Cálcio</label>
+                                <div class="input-control text size3" data-role="input-control">
+                                <input type="text" id="calcio" name="calcio" placeholder="Cálcio">
+                            </div>
+                            </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
+                            </tr>
+                            </table>
+                            
 							<br>
                             
                             <center>
