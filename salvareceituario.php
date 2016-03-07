@@ -71,7 +71,7 @@ $pdf->Cell(20,10,utf8_decode('Café da Manhã:'));
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(10);
 $pdf->Cell(20);
-$pdf->MultiCell(90,5,$cafe,1);
+$pdf->MultiCell(180,5,$cafe,1);
 $pdf->SetY(250);
 $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
