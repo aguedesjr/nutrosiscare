@@ -48,16 +48,32 @@ if (isset($_GET["data"])){
 $sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
 mysql_query($sqli);
 
+class PDF extends FPDI
+{
+	protected $_tplIdx;
+
+	public function Header()
+	{
+		if (null === $this->_tplIdx) {
+			$this->setSourceFile('fpdi/timbre.pdf');
+			$this->_tplIdx = $this->importPage(1);
+		}
+
+		$this->useTemplate($this->_tplIdx);
+	}
+}
+
+
 // initiate FPDI
-$pdf = new FPDI();
+$pdf = new PDF();
 // add a page
 $pdf->AddPage();
 // set the source file
-$pdf->setSourceFile("fpdi/timbre.pdf");
+//$pdf->setSourceFile("fpdi/timbre.pdf");
 // import page 1
-$tplIdx = $pdf->importPage(1);
+//$tplIdx = $pdf->importPage(1);
 // use the imported page and place it at point 10,10 with a width of 100 mm
-$pdf->useTemplate($tplIdx, 0, 0, 210);
+//$pdf->useTemplate($tplIdx, 0, 0, 210);
 
 // now write some text above the imported page
 $pdf->SetFont('Arial','B',14);
