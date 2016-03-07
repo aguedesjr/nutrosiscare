@@ -67,7 +67,7 @@ $pdf->Cell(20,10,'DIETA');
 $pdf->SetFont('Arial','B',12);
 $pdf->Ln(15);
 $pdf->Cell(20);
-$pdf->Cell(20,10,'Café da Manhã');
+$pdf->Cell(20,10,'Cafe da Manha');
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(10);
 $pdf->Cell(20);
