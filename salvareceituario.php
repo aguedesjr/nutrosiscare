@@ -67,7 +67,7 @@ class PDF extends FPDI
 // initiate FPDI
 $pdf = new PDF();
 // define o tamanho do topo
-$pdf->SetTopMargin(30);
+$pdf->SetTopMargin(60);
 // add a page
 $pdf->AddPage();
 // set the source file
@@ -79,7 +79,7 @@ $pdf->AddPage();
 
 // now write some text above the imported page
 $pdf->SetFont('Arial','B',14);
-$pdf->Ln(60);
+//$pdf->Ln(60);
 $pdf->Cell(85);
 $pdf->Cell(20,10,'DIETA');
 $pdf->SetFont('Arial','BU',12);
