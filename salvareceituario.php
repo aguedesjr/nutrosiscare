@@ -20,7 +20,7 @@ if (isset($_GET["nome"])){
 
 if (isset($_GET["cpf"])){
 	$cpf = utf8_decode($_GET["cpf"]);
-}else {if (isset($_POST["nome"])){
+}else {if (isset($_POST["cpf"])){
 	$cpf = utf8_decode($_POST["cpf"]);
 }};
 
