@@ -122,7 +122,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                             <td bgcolor="#FDFDFD">
                                 <label>Convênio</label>
                                 <div class="input-control text size3" data-role="input-control">
-	                                <input type="text" disabled="disabled" value="<? echo utf8_encode($resultpac[2]);?>" id="convenio" name="convenio" placeholder="Convênio">
+	                                <input type="text" readonly="readonly" value="<? echo utf8_encode($resultpac[2]);?>" id="convenio" name="convenio" placeholder="Convênio">
 	                            </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
