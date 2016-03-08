@@ -67,7 +67,7 @@ class PDF extends FPDI
 // initiate FPDI
 $pdf = new PDF();
 // define o tamanho do topo
-$pdf->SetTopMargin(60);
+$pdf->SetTopMargin(70);
 // add a page
 $pdf->AddPage();
 // set the source file
