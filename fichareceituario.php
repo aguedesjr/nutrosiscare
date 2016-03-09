@@ -117,6 +117,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                             <div class="input-control text" data-role="input-control">
                                 <input type="text" id="nome" name="nome" readonly="readonly" value="<? echo utf8_encode($resultpac[0])?>" placeholder="Nome do Paciente">
                                 <input type="hidden" id="id" name="id" value="<? echo $resultpac[1];?>"> <!-- Envia o id do paciente -->
+                                <input type="hidden" id="opbd" name="opbd" value="cadastrar"> <!-- Envia qual ação o BD irá realizar -->
                             </div>
                             <table><tr>
                             <td bgcolor="#FDFDFD">

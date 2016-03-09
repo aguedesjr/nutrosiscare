@@ -16,22 +16,29 @@ define('FPDF_FONTPATH','fpdf16/font/');
 
 //BLOCO DAS VARIAVEIS (fichareceituario.php)
 //-----------------------------------------------------------------------------------------------
+//Qual operação o banco de dados irá realizar (cadastrar/atualizar)
+if (isset($_GET["opbd"])){
+	$opbd = utf8_decode($_GET["opbd"]);
+}else {if (isset($_POST["opbd"])){
+	$opbd = utf8_decode($_POST["opbd"]);
+}};
+
 if (isset($_GET["nome"])){
 	$nome = utf8_decode($_GET["nome"]);
 }else {if (isset($_POST["nome"])){
 	$nome = utf8_decode($_POST["nome"]);
 }};
 
-if (isset($_GET["cpf"])){
-	$cpf = utf8_decode($_GET["cpf"]);
-}else {if (isset($_POST["cpf"])){
-	$cpf = utf8_decode($_POST["cpf"]);
+if (isset($_GET["convenio"])){
+	$convenio = utf8_decode($_GET["convenio"]);
+}else {if (isset($_POST["convenio"])){
+	$convenio = utf8_decode($_POST["convenio"]);
 }};
 
-if (isset($_GET["valor"])){
-	$valor = utf8_decode($_GET["valor"]);
-}else {if (isset($_POST["valor"])){
-	$valor = utf8_decode($_POST["valor"]);
+if (isset($_GET["id"])){
+	$id = utf8_decode($_GET["id"]);
+}else {if (isset($_POST["id"])){
+	$id = utf8_decode($_POST["id"]);
 }};
 
 if (isset($_GET["cafe"])){
@@ -87,9 +94,20 @@ if (isset($_GET["data"])){
 }};
 //-----------------------------------------------------------------------------------------------
 
-// Salva as informa��es no banco de dados
-$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
-mysql_query($sqli);
+//BLOCO SALVAR INFORMAÇÕES NO BD
+//-----------------------------------------------------------------------------------------------
+if ($opbd == "cadastrar"){
+	echo ("Chegou aqui!!");
+	// Salva as informações no banco de dados
+	$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
+	mysql_query($sqli);
+} elseif ($opbd == "atualizar"){
+	$sqli = "";
+	mysql_query($sqli);
+}
+
+//-----------------------------------------------------------------------------------------------
+
 
 //BLOCO USO DO TEMPLATE DO PDF
 //-----------------------------------------------------------------------------------------------
