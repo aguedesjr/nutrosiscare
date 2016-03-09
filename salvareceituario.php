@@ -227,7 +227,7 @@ $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
 $pdf->Ln(5);
 $pdf->Cell(65);
-$pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto ');
+$pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
 $pdf->Ln(5);
 $pdf->Cell(85);
 $pdf->Cell(20,10,'Data: '.$data);
