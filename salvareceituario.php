@@ -70,6 +70,14 @@ if (isset($_GET["ceia"])){
 	$ceia = utf8_decode($_POST["ceia"]);
 }};
 
+// Data para ser exibida no PDF
+if (isset($_GET["data"])){
+	$data = $_GET["data"];
+}else {if (isset($_POST["data"])){
+	$data = $_POST["data"];
+	
+
+// Data para ser salva no BD
 if (isset($_GET["data"])){
 	$datan = $_GET["data"];
 	$datan = implode("-", array_reverse(explode("/", $datan)));
@@ -205,7 +213,7 @@ $pdf->Cell(65);
 $pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
 $pdf->Ln(5);
 $pdf->Cell(80);
-$pdf->Cell(20,10,'Data: '.$datan);
+$pdf->Cell(20,10,'Data: '.$data);
 //$pdf->Cell(20,10,'CPF: 030.771.727-55');
 //-----------------------------------------------------------------------------------------------
 
