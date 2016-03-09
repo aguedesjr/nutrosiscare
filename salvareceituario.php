@@ -112,13 +112,21 @@ $pdf->AddPage(); // adiciona pagina
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','B',14);
 $pdf->Cell(85);
-$pdf->Cell(20,10,'DIETA');
+$pdf->Cell(20,10,utf8_decode('ORIENTAÇÕES NUTRICIONAIS'));
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO NOME DO PACIENTE
+//-----------------------------------------------------------------------------------------------
+$pdf->SetFont('Arial','B',12);
+$pdf->Ln(10);
+$pdf->Cell(20);
+$pdf->MultiCell(150,5,$nome);
 //-----------------------------------------------------------------------------------------------
 
 //BLOCO CAFE DA MANHA
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(15);
+$pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Café da Manhã:'));
 $pdf->SetFont('Arial','',10);
@@ -130,7 +138,7 @@ $pdf->MultiCell(150,5,$cafe);
 //BLOCO COLAÇÃO
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(15);
+$pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Colação:'));
 $pdf->SetFont('Arial','',10);
@@ -142,7 +150,7 @@ $pdf->MultiCell(150,5,$colacao);
 //BLOCO ALMOÇO
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(15);
+$pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Almoço:'));
 $pdf->SetFont('Arial','',10);
@@ -154,7 +162,7 @@ $pdf->MultiCell(150,5,$almoco);
 //BLOCO LANCHE
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(15);
+$pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Lanche:'));
 $pdf->SetFont('Arial','',10);
@@ -166,7 +174,7 @@ $pdf->MultiCell(150,5,$lanche);
 //BLOCO JANTAR
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(15);
+$pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Jantar:'));
 $pdf->SetFont('Arial','',10);
@@ -178,7 +186,7 @@ $pdf->MultiCell(150,5,$jantar);
 //BLOCO CEIA
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(15);
+$pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Ceia:'));
 $pdf->SetFont('Arial','',10);
