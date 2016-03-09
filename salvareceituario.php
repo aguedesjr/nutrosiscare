@@ -75,7 +75,7 @@ if (isset($_GET["data"])){
 	$data = $_GET["data"];
 }else {if (isset($_POST["data"])){
 	$data = $_POST["data"];
-	
+}};	
 
 // Data para ser salva no BD
 if (isset($_GET["data"])){
