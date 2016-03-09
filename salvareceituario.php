@@ -97,7 +97,6 @@ if (isset($_GET["data"])){
 //BLOCO SALVAR INFORMAÇÕES NO BD
 //-----------------------------------------------------------------------------------------------
 if ($opbd == "cadastrar"){
-	echo ("Chegou aqui!!");
 	// Salva as informações no banco de dados
 	$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
 	mysql_query($sqli);
@@ -228,7 +227,7 @@ $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
 $pdf->Ln(5);
 $pdf->Cell(65);
-$pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
+$pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto '.$opbd);
 $pdf->Ln(5);
 $pdf->Cell(85);
 $pdf->Cell(20,10,'Data: '.$data);
