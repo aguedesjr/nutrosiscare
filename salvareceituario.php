@@ -134,7 +134,7 @@ $pdf->Cell(150,5,'Nome: '.$nome);
 //BLOCO CAFE DA MANHA
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
-$pdf->Ln(10);
+$pdf->Ln(8);
 $pdf->Cell(20);
 $pdf->Cell(20,10,utf8_decode('Café da Manhã:'));
 $pdf->SetFont('Arial','',10);
@@ -212,7 +212,7 @@ $pdf->Ln(5);
 $pdf->Cell(65);
 $pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
 $pdf->Ln(5);
-$pdf->Cell(80);
+$pdf->Cell(85);
 $pdf->Cell(20,10,'Data: '.$data);
 //$pdf->Cell(20,10,'CPF: 030.771.727-55');
 //-----------------------------------------------------------------------------------------------
