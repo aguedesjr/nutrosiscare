@@ -111,7 +111,7 @@ $pdf->AddPage(); // adiciona pagina
 //BLOCO NOME DA GUIA
 //-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(70);
+$pdf->Cell(60);
 $pdf->Cell(20,10,utf8_decode('ORIENTAÇÕES NUTRICIONAIS'));
 //-----------------------------------------------------------------------------------------------
 
@@ -120,7 +120,7 @@ $pdf->Cell(20,10,utf8_decode('ORIENTAÇÕES NUTRICIONAIS'));
 $pdf->SetFont('Arial','',12);
 $pdf->Ln(12);
 $pdf->Cell(20);
-$pdf->MultiCell(150,5,'Nome: '.$nome);
+$pdf->Cell(150,5,'Nome: '.$nome);
 //-----------------------------------------------------------------------------------------------
 
 //BLOCO CAFE DA MANHA
@@ -205,7 +205,8 @@ $pdf->Cell(65);
 $pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
 $pdf->Ln(5);
 $pdf->Cell(80);
-$pdf->Cell(20,10,'CPF: 030.771.727-55');
+$pdf->Cell(20,10,'Data: '.$datan);
+//$pdf->Cell(20,10,'CPF: 030.771.727-55');
 //-----------------------------------------------------------------------------------------------
 
 $pdf->Output("recibo_".$nome.".pdf",D);
