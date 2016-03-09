@@ -1,4 +1,6 @@
 <?
+//BLOCO REQUISITOS
+//-----------------------------------------------------------------------------------------------
 session_start();
 //Requer autenticação
 require_once ("validalogin.php");
@@ -10,8 +12,10 @@ require_once ("fpdf16/fpdf.php");
 require_once ("fpdi/fpdi.php");
 //Caminho do arquivo de fontes para o FPDF
 define('FPDF_FONTPATH','fpdf16/font/');
+//-----------------------------------------------------------------------------------------------
 
-// Recebe os valores que vem da pagina recibo.php
+//BLOCO DAS VARIAVEIS (fichareceituario.php)
+//-----------------------------------------------------------------------------------------------
 if (isset($_GET["nome"])){
 	$nome = utf8_decode($_GET["nome"]);
 }else {if (isset($_POST["nome"])){
@@ -36,6 +40,36 @@ if (isset($_GET["cafe"])){
 	$cafe = utf8_decode($_POST["cafe"]);
 }};
 
+if (isset($_GET["colacao"])){
+	$colacao = utf8_decode($_GET["colacao"]);
+}else {if (isset($_POST["colacao"])){
+	$colacao = utf8_decode($_POST["colacao"]);
+}};
+
+if (isset($_GET["almoco"])){
+	$almoco = utf8_decode($_GET["almoco"]);
+}else {if (isset($_POST["almoco"])){
+	$almoco = utf8_decode($_POST["almoco"]);
+}};
+
+if (isset($_GET["lanche"])){
+	$lanche = utf8_decode($_GET["lanche"]);
+}else {if (isset($_POST["lanche"])){
+	$lanche = utf8_decode($_POST["lanche"]);
+}};
+
+if (isset($_GET["jantar"])){
+	$jantar = utf8_decode($_GET["jantar"]);
+}else {if (isset($_POST["jantar"])){
+	$jantar = utf8_decode($_POST["jantar"]);
+}};
+
+if (isset($_GET["ceia"])){
+	$ceia = utf8_decode($_GET["ceia"]);
+}else {if (isset($_POST["ceia"])){
+	$ceia = utf8_decode($_POST["ceia"]);
+}};
+
 if (isset($_GET["data"])){
 	$datan = $_GET["data"];
 	$datan = implode("-", array_reverse(explode("/", $datan)));
@@ -43,11 +77,14 @@ if (isset($_GET["data"])){
 	$datan = $_POST["data"];
 	$datan = implode("-", array_reverse(explode("/", $datan)));
 }};
+//-----------------------------------------------------------------------------------------------
 
 // Salva as informa��es no banco de dados
 $sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
 mysql_query($sqli);
 
+//BLOCO USO DO TEMPLATE DO PDF
+//-----------------------------------------------------------------------------------------------
 class PDF extends FPDI
 {
 	protected $_tplIdx;
@@ -62,26 +99,24 @@ class PDF extends FPDI
 		$this->useTemplate($this->_tplIdx);
 	}
 }
+//-----------------------------------------------------------------------------------------------
 
+//BLOCO CONFIGURAÇÕES DO PDF
+//-----------------------------------------------------------------------------------------------
+$pdf = new PDF(); // inicia FPDI
+$pdf->SetTopMargin(65); // define o tamanho do topo
+$pdf->AddPage(); // adiciona pagina
+//-----------------------------------------------------------------------------------------------
 
-// initiate FPDI
-$pdf = new PDF();
-// define o tamanho do topo
-$pdf->SetTopMargin(65);
-// add a page
-$pdf->AddPage();
-// set the source file
-//$pdf->setSourceFile("fpdi/timbre.pdf");
-// import page 1
-//$tplIdx = $pdf->importPage(1);
-// use the imported page and place it at point 10,10 with a width of 100 mm
-//$pdf->useTemplate($tplIdx, 0, 0, 210);
-
-// now write some text above the imported page
+//BLOCO NOME DA GUIA
+//-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','B',14);
-//$pdf->Ln(60);
 $pdf->Cell(85);
 $pdf->Cell(20,10,'DIETA');
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO CAFE DA MANHA
+//-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
 $pdf->Ln(15);
 $pdf->Cell(20);
@@ -90,6 +125,10 @@ $pdf->SetFont('Arial','',10);
 $pdf->Ln(10);
 $pdf->Cell(20);
 $pdf->MultiCell(150,5,$cafe);
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO COLAÇÃO
+//-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
 $pdf->Ln(15);
 $pdf->Cell(20);
@@ -97,7 +136,11 @@ $pdf->Cell(20,10,utf8_decode('Colação:'));
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(10);
 $pdf->Cell(20);
-$pdf->MultiCell(150,5,$cafe);
+$pdf->MultiCell(150,5,$colacao);
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO ALMOÇO
+//-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
 $pdf->Ln(15);
 $pdf->Cell(20);
@@ -105,7 +148,11 @@ $pdf->Cell(20,10,utf8_decode('Almoço:'));
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(10);
 $pdf->Cell(20);
-$pdf->MultiCell(150,5,$cafe);
+$pdf->MultiCell(150,5,$almoco);
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO LANCHE
+//-----------------------------------------------------------------------------------------------
 $pdf->SetFont('Arial','BU',12);
 $pdf->Ln(15);
 $pdf->Cell(20);
@@ -113,7 +160,35 @@ $pdf->Cell(20,10,utf8_decode('Lanche:'));
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(10);
 $pdf->Cell(20);
-$pdf->MultiCell(150,5,$cafe);
+$pdf->MultiCell(150,5,$lanche);
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO JANTAR
+//-----------------------------------------------------------------------------------------------
+$pdf->SetFont('Arial','BU',12);
+$pdf->Ln(15);
+$pdf->Cell(20);
+$pdf->Cell(20,10,utf8_decode('Jantar:'));
+$pdf->SetFont('Arial','',10);
+$pdf->Ln(10);
+$pdf->Cell(20);
+$pdf->MultiCell(150,5,$jantar);
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO CEIA
+//-----------------------------------------------------------------------------------------------
+$pdf->SetFont('Arial','BU',12);
+$pdf->Ln(15);
+$pdf->Cell(20);
+$pdf->Cell(20,10,utf8_decode('Ceia:'));
+$pdf->SetFont('Arial','',10);
+$pdf->Ln(10);
+$pdf->Cell(20);
+$pdf->MultiCell(150,5,$ceia);
+//-----------------------------------------------------------------------------------------------
+
+//BLOCO ASSINATURA
+//-----------------------------------------------------------------------------------------------
 $pdf->SetY(250);
 $pdf->Cell(45);
 $pdf->Cell(20,10,'_____________________________________________________');
@@ -123,6 +198,7 @@ $pdf->Cell(20,10,'Dra. Clarissa de Oliveira Soares Peixoto');
 $pdf->Ln(5);
 $pdf->Cell(80);
 $pdf->Cell(20,10,'CPF: 030.771.727-55');
+//-----------------------------------------------------------------------------------------------
 
 $pdf->Output("recibo_".$nome.".pdf",D);
 ?>
