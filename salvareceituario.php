@@ -23,6 +23,20 @@ if (isset($_GET["opbd"])){
 	$opbd = utf8_decode($_POST["opbd"]);
 }};
 
+//id das informações no banco de dados
+if (isset($_GET["id"])){
+	$id = utf8_decode($_GET["id"]);
+}else {if (isset($_POST["id"])){
+	$id = utf8_decode($_POST["id"]);
+}};
+
+//código de identificação do usuário
+if (isset($_GET["codigo"])){
+	$codigo = utf8_decode($_GET["codigo"]);
+}else {if (isset($_POST["codigo"])){
+	$codigo = utf8_decode($_POST["codigo"]);
+}};
+
 if (isset($_GET["nome"])){
 	$nome = utf8_decode($_GET["nome"]);
 }else {if (isset($_POST["nome"])){
@@ -35,10 +49,116 @@ if (isset($_GET["convenio"])){
 	$convenio = utf8_decode($_POST["convenio"]);
 }};
 
-if (isset($_GET["id"])){
-	$id = utf8_decode($_GET["id"]);
-}else {if (isset($_POST["id"])){
-	$id = utf8_decode($_POST["id"]);
+// Data para ser exibida no PDF
+if (isset($_GET["data"])){
+	$data = $_GET["data"];
+}else {if (isset($_POST["data"])){
+	$data = $_POST["data"];
+}};
+
+// Data para ser salva no BD
+if (isset($_GET["data"])){
+	$datan = $_GET["data"];
+	$datan = implode("-", array_reverse(explode("/", $datan)));
+}else {if (isset($_POST["data"])){
+	$datan = $_POST["data"];
+	$datan = implode("-", array_reverse(explode("/", $datan)));
+}};
+
+if (isset($_GET["pesoatual"])){
+	$pesoatual = utf8_decode($_GET["pesoatual"]);
+}else {if (isset($_POST["pesoatual"])){
+	$pesoatual = utf8_decode($_POST["pesoatual"]);
+}};
+
+if (isset($_GET["altura"])){
+	$altura = utf8_decode($_GET["altura"]);
+}else {if (isset($_POST["altura"])){
+	$altura = utf8_decode($_POST["altura"]);
+}};
+
+if (isset($_GET["imc"])){
+	$imc = utf8_decode($_GET["imc"]);
+}else {if (isset($_POST["imc"])){
+	$imc = utf8_decode($_POST["imc"]);
+}};
+
+if (isset($_GET["ca"])){
+	$ca = utf8_decode($_GET["ca"]);
+}else {if (isset($_POST["ca"])){
+	$ca = utf8_decode($_POST["ca"]);
+}};
+
+if (isset($_GET["pesousual"])){
+	$pesousual = utf8_decode($_GET["pesousual"]);
+}else {if (isset($_POST["pesousual"])){
+	$pesousual = utf8_decode($_POST["pesousual"]);
+}};
+
+if (isset($_GET["pesousual"])){
+	$pesousual = utf8_decode($_GET["pesousual"]);
+}else {if (isset($_POST["pesousual"])){
+	$pesousual = utf8_decode($_POST["pesousual"]);
+}};
+
+if (isset($_GET["pa"])){
+	$pa = utf8_decode($_GET["pa"]);
+}else {if (isset($_POST["pa"])){
+	$pa = utf8_decode($_POST["pa"]);
+}};
+
+if (isset($_GET["med"])){
+	$med = utf8_decode($_GET["med"]);
+}else {if (isset($_POST["med"])){
+	$med = utf8_decode($_POST["med"]);
+}};
+
+if (isset($_GET["queixa"])){
+	$queixa = utf8_decode($_GET["queixa"]);
+}else {if (isset($_POST["queixa"])){
+	$queixa = utf8_decode($_POST["queixa"]);
+}};
+
+if (isset($_GET["histopato"])){
+	$histopato = utf8_decode($_GET["histopato"]);
+}else {if (isset($_POST["histopato"])){
+	$histopato = utf8_decode($_POST["histopato"]);
+}};
+
+if (isset($_GET["medreg"])){
+	$medreg = utf8_decode($_GET["medreg"]);
+}else {if (isset($_POST["medreg"])){
+	$medreg = utf8_decode($_POST["medreg"]);
+}};
+
+if (isset($_GET["alergiamed"])){
+	$alergiamed = utf8_decode($_GET["alergiamed"]);
+}else {if (isset($_POST["alergiamed"])){
+	$alergiamed = utf8_decode($_POST["alergiamed"]);
+}};
+
+if (isset($_GET["qualalergiamed"])){
+	$qualalergiamed = utf8_decode($_GET["qualalergiamed"]);
+}else {if (isset($_POST["qualalergiamed"])){
+	$qualalergiamed = utf8_decode($_POST["qualalergiamed"]);
+}};
+
+if (isset($_GET["habint"])){
+	$habint = utf8_decode($_GET["habint"]);
+}else {if (isset($_POST["habint"])){
+	$habint = utf8_decode($_POST["habint"]);
+}};
+
+if (isset($_GET["ativfis"])){
+	$ativfis = utf8_decode($_GET["ativfis"]);
+}else {if (isset($_POST["ativfis"])){
+	$ativfis = utf8_decode($_POST["ativfis"]);
+}};
+
+if (isset($_GET["qualativfis"])){
+	$qualativfis = utf8_decode($_GET["qualativfis"]);
+}else {if (isset($_POST["qualativfis"])){
+	$qualativfis = utf8_decode($_POST["qualativfis"]);
 }};
 
 if (isset($_GET["cafe"])){
@@ -77,21 +197,7 @@ if (isset($_GET["ceia"])){
 	$ceia = utf8_decode($_POST["ceia"]);
 }};
 
-// Data para ser exibida no PDF
-if (isset($_GET["data"])){
-	$data = $_GET["data"];
-}else {if (isset($_POST["data"])){
-	$data = $_POST["data"];
-}};	
 
-// Data para ser salva no BD
-if (isset($_GET["data"])){
-	$datan = $_GET["data"];
-	$datan = implode("-", array_reverse(explode("/", $datan)));
-}else {if (isset($_POST["data"])){
-	$datan = $_POST["data"];
-	$datan = implode("-", array_reverse(explode("/", $datan)));
-}};
 //-----------------------------------------------------------------------------------------------
 
 //BLOCO SALVAR INFORMAÇÕES NO BD
