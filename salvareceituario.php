@@ -161,6 +161,42 @@ if (isset($_GET["qualativfis"])){
 	$qualativfis = utf8_decode($_POST["qualativfis"]);
 }};
 
+if (isset($_GET["cafeusual"])){
+	$cafeusual = utf8_decode($_GET["cafeusual"]);
+}else {if (isset($_POST["cafeusual"])){
+	$cafeusual = utf8_decode($_POST["cafeusual"]);
+}};
+
+if (isset($_GET["colacaousual"])){
+	$colacaousual = utf8_decode($_GET["colacaousual"]);
+}else {if (isset($_POST["colacaousual"])){
+	$colacaousual = utf8_decode($_POST["colacaousual"]);
+}};
+
+if (isset($_GET["almocousual"])){
+	$almocousual = utf8_decode($_GET["almocousual"]);
+}else {if (isset($_POST["almocousual"])){
+	$almocousual = utf8_decode($_POST["almocousual"]);
+}};
+
+if (isset($_GET["lancheusual"])){
+	$lancheusual = utf8_decode($_GET["lancheusual"]);
+}else {if (isset($_POST["lancheusual"])){
+	$lancheusual = utf8_decode($_POST["lancheusual"]);
+}};
+
+if (isset($_GET["jantarusual"])){
+	$jantarusual = utf8_decode($_GET["jantarusual"]);
+}else {if (isset($_POST["jantarusual"])){
+	$jantarusual = utf8_decode($_POST["jantarusual"]);
+}};
+
+if (isset($_GET["ceiausual"])){
+	$ceiausual = utf8_decode($_GET["ceiausual"]);
+}else {if (isset($_POST["ceiausual"])){
+	$ceiausual = utf8_decode($_POST["ceiausual"]);
+}};
+
 if (isset($_GET["cafe"])){
 	$cafe = utf8_decode($_GET["cafe"]);
 }else {if (isset($_POST["cafe"])){
@@ -197,6 +233,23 @@ if (isset($_GET["ceia"])){
 	$ceia = utf8_decode($_POST["ceia"]);
 }};
 
+if (isset($_GET["naogosta"])){
+	$naogosta = utf8_decode($_GET["naogosta"]);
+}else {if (isset($_POST["naogosta"])){
+	$naogosta = utf8_decode($_POST["naogosta"]);
+}};
+
+if (isset($_GET["conduta"])){
+	$conduta = utf8_decode($_GET["conduta"]);
+}else {if (isset($_POST["conduta"])){
+	$conduta = utf8_decode($_POST["conduta"]);
+}};
+
+if (isset($_GET["obs"])){
+	$obs = utf8_decode($_GET["obs"]);
+}else {if (isset($_POST["obs"])){
+	$obs = utf8_decode($_POST["obs"]);
+}};
 
 //-----------------------------------------------------------------------------------------------
 
