@@ -161,6 +161,162 @@ if (isset($_GET["qualativfis"])){
 	$qualativfis = utf8_decode($_POST["qualativfis"]);
 }};
 
+if (isset($_GET["coltotal"])){
+	$coltotal = utf8_decode($_GET["coltotal"]);
+}else {if (isset($_POST["coltotal"])){
+	$coltotal = utf8_decode($_POST["coltotal"]);
+}};
+
+if (isset($_GET["hdl"])){
+	$hdl = utf8_decode($_GET["hdl"]);
+}else {if (isset($_POST["hdl"])){
+	$hdl = utf8_decode($_POST["hdl"]);
+}};
+
+if (isset($_GET["ldl"])){
+	$ldl = utf8_decode($_GET["ldl"]);
+}else {if (isset($_POST["ldl"])){
+	$ldl = utf8_decode($_POST["ldl"]);
+}};
+
+if (isset($_GET["vldl"])){
+	$vldl = utf8_decode($_GET["vldl"]);
+}else {if (isset($_POST["vldl"])){
+	$vldl = utf8_decode($_POST["vldl"]);
+}};
+
+if (isset($_GET["ht"])){
+	$ht = utf8_decode($_GET["ht"]);
+}else {if (isset($_POST["ht"])){
+	$ht = utf8_decode($_POST["ht"]);
+}};
+
+if (isset($_GET["hb"])){
+	$hb = utf8_decode($_GET["hb"]);
+}else {if (isset($_POST["hb"])){
+	$hb = utf8_decode($_POST["hb"]);
+}};
+
+if (isset($_GET["glicose"])){
+	$glicose = utf8_decode($_GET["glicose"]);
+}else {if (isset($_POST["glicose"])){
+	$glicose = utf8_decode($_POST["glicose"]);
+}};
+
+if (isset($_GET["hbglicosada"])){
+	$hbglicosada = utf8_decode($_GET["hbglicosada"]);
+}else {if (isset($_POST["hbglicosada"])){
+	$hbglicosada = utf8_decode($_POST["hbglicosada"]);
+}};
+
+if (isset($_GET["vcm"])){
+	$vcm = utf8_decode($_GET["vcm"]);
+}else {if (isset($_POST["vcm"])){
+	$vcm = utf8_decode($_POST["vcm"]);
+}};
+
+if (isset($_GET["ureia"])){
+	$ureia = utf8_decode($_GET["ureia"]);
+}else {if (isset($_POST["ureia"])){
+	$ureia = utf8_decode($_POST["ureia"]);
+}};
+
+if (isset($_GET["tgo"])){
+	$tgo = utf8_decode($_GET["tgo"]);
+}else {if (isset($_POST["tgo"])){
+	$tgo = utf8_decode($_POST["tgo"]);
+}};
+
+if (isset($_GET["tgp"])){
+	$tgp = utf8_decode($_GET["tgp"]);
+}else {if (isset($_POST["tgp"])){
+	$tgp = utf8_decode($_POST["tgp"]);
+}};
+
+if (isset($_GET["cpk"])){
+	$cpk = utf8_decode($_GET["cpk"]);
+}else {if (isset($_POST["cpk"])){
+	$cpk = utf8_decode($_POST["cpk"]);
+}};
+
+if (isset($_GET["sodio"])){
+	$sodio = utf8_decode($_GET["sodio"]);
+}else {if (isset($_POST["sodio"])){
+	$sodio = utf8_decode($_POST["sodio"]);
+}};
+
+if (isset($_GET["potassio"])){
+	$potassio = utf8_decode($_GET["potassio"]);
+}else {if (isset($_POST["potassio"])){
+	$potassio = utf8_decode($_POST["potassio"]);
+}};
+
+if (isset($_GET["calcio"])){
+	$calcio = utf8_decode($_GET["calcio"]);
+}else {if (isset($_POST["calcio"])){
+	$calcio = utf8_decode($_POST["calcio"]);
+}};
+
+if (isset($_GET["vitaminad"])){
+	$vitaminad = utf8_decode($_GET["vitaminad"]);
+}else {if (isset($_POST["vitaminad"])){
+	$vitaminad = utf8_decode($_POST["vitaminad"]);
+}};
+
+if (isset($_GET["vitaminab12"])){
+	$vitaminab12 = utf8_decode($_GET["vitaminab12"]);
+}else {if (isset($_POST["vitaminab12"])){
+	$vitaminab12 = utf8_decode($_POST["vitaminab12"]);
+}};
+
+if (isset($_GET["acidofolico"])){
+	$acidofolico = utf8_decode($_GET["acidofolico"]);
+}else {if (isset($_POST["acidofolico"])){
+	$acidofolico = utf8_decode($_POST["acidofolico"]);
+}};
+
+if (isset($_GET["ptnc"])){
+	$ptnc = utf8_decode($_GET["ptnc"]);
+}else {if (isset($_POST["ptnc"])){
+	$ptnc = utf8_decode($_POST["ptnc"]);
+}};
+
+if (isset($_GET["vhs"])){
+	$vhs = utf8_decode($_GET["vhs"]);
+}else {if (isset($_POST["vhs"])){
+	$vhs = utf8_decode($_POST["vhs"]);
+}};
+
+if (isset($_GET["insulina"])){
+	$insulina = utf8_decode($_GET["insulina"]);
+}else {if (isset($_POST["insulina"])){
+	$insulina = utf8_decode($_POST["insulina"]);
+}};
+
+if (isset($_GET["ptntotal"])){
+	$ptntotal = utf8_decode($_GET["ptntotal"]);
+}else {if (isset($_POST["ptntotal"])){
+	$ptntotal = utf8_decode($_POST["ptntotal"]);
+}};
+
+if (isset($_GET["ttog"])){
+	$ttog = utf8_decode($_GET["ttog"]);
+}else {if (isset($_POST["ttog"])){
+	$ttog = utf8_decode($_POST["ttog"]);
+}};
+
+if (isset($_GET["albumina"])){
+	$albumina = utf8_decode($_GET["albumina"]);
+}else {if (isset($_POST["albumina"])){
+	$albumina = utf8_decode($_POST["albumina"]);
+}};
+
+if (isset($_GET["globulina"])){
+	$globulina = utf8_decode($_GET["globulina"]);
+}else {if (isset($_POST["globulina"])){
+	$globulina = utf8_decode($_POST["globulina"]);
+}};
+
 if (isset($_GET["cafeusual"])){
 	$cafeusual = utf8_decode($_GET["cafeusual"]);
 }else {if (isset($_POST["cafeusual"])){
@@ -259,6 +415,7 @@ if ($opbd == "cadastrar"){
 	// Salva as informações no banco de dados
 	$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
 	mysql_query($sqli);
+	// Atualiza as informações no banco de dados
 } elseif ($opbd == "atualizar"){
 	$sqli = "";
 	mysql_query($sqli);
