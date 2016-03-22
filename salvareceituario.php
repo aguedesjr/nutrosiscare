@@ -413,7 +413,15 @@ if (isset($_GET["obs"])){
 //-----------------------------------------------------------------------------------------------
 if ($opbd == "cadastrar"){
 	// Salva as informações no banco de dados
-	$sqli = "INSERT INTO recibo (nome, cpf, valor, valorex, data) VALUES ('$nome', '$cpf', '$valor', '$valorex', '$datan');";
+	$sqli = "INSERT INTO receituario (codigo, nome, convenio, data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg, alergiamed, qualalergiamed, habint, ativfis,
+			 qualativfis, coltotal, hdl, ldl, vldl, ht, hb, glicose, hbglicosada, vcm, ureia, tgo, tgp, cpk, sodio, potassio, calcio, vitaminad, vitaminab12, acidofolico, ptnc, vhs, insulina,
+			 ptntotal, ttog, albumina, globulina, cafeusual, colacaousual, almocousual, lancheusual, jantarusual, ceiausual, cafe, colacao, almoco, lanche, jantar, ceia, naogosta, conduta, obs) 
+			 VALUES ('$codigo','$nome', '$convenio', '$datan', '$pesoatual', '$altura', '$imc', '$ca', '$pesousual', '$pa', '$med', '$queixa', '$histopato', '$medreg', '$alergiamed',
+			 '$qualalergiamed', '$habint', '$ativfis', '$qualativfis', '$coltotal', '$hdl', '$ldl', '$vldl', '$ht', '$hb', '$glicose', '$hbglicosada', '$vcm', '$ureia', '$tgo', '$tgp', 
+			 '$cpk', '$sodio', '$potassio', '$calcio', '$vitaminad', '$vitaminab12', '$acidofolico', '$ptnc', '$vhs', '$insulina', '$ptntotal', '$ttog', '$albumina', '$globulina', 
+			 '$cafeusual', '$colacaousual', '$almocousual', '$lancheusual', '$jantarusual', '$ceiausual', '$cafe', '$colacao', '$almoco', '$lanche', '$jantar', '$ceia', '$naogosta', 
+			 '$conduta', '$obs');";
+	// Executa a query
 	mysql_query($sqli);
 	// Atualiza as informações no banco de dados
 } elseif ($opbd == "atualizar"){
