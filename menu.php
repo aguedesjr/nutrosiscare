@@ -59,6 +59,7 @@
                                 <!-- <li><a href="fichaanaminese.php"><i class="icon-stats"></i>Anaminese</a></li>  -->
                                 <!-- <li><a href="fichabuscaprocedimentomedicomedico.php"><i class="icon-copy"></i>Procedimentos</a></li>-->
                                 <li><a href="fichareceituario.php"><i class="icon-clipboard-2"></i>Receituário</a></li>
+                                <li><a href="buscarfichareceituario.php"><i class="icon-search"></i>Buscar</a></li>
                             </ul>
                         </li>
                         <li class="stick bg-yellow">
