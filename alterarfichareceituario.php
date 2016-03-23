@@ -73,7 +73,7 @@ $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
-$sqlficha = "SELECT data, pesoatual FROM pacientes WHERE codigo = '$codigo'";
+$sqlficha = "SELECT data, pesoatual FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
