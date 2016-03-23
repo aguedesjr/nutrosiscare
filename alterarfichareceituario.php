@@ -141,7 +141,7 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <td bgcolor="#FDFDFD">
                                     <label>Data</label>
                                     <div class="input-control text" id="datepicker">
-                                        <input type="text" name="data" placeholder="Data">
+                                        <input type="text" name="data" value="<? echo $datan; ?>" placeholder="Data">
                                         <button class="btn-date"></button>
                                     </div>
                                 </td>
