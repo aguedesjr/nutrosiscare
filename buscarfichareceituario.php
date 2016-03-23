@@ -86,7 +86,7 @@
             <? include ("menu.php"); ?>
             <div class="span1"></div>
             <div class="span10">
-                <form method="POST" onsubmit="return valida(this);" action="editarpaciente.php" name="editarpaciente" id="editarpaciente">
+                <form method="POST" onsubmit="return valida(this);" action="alterarfichareceituario.php" name="alterarfichareceituario" id="alterarfichareceituario">
                 <div class="receituario">
                 <div class="tab-control" data-role="tab-control">
                     <ul class="tabs">
