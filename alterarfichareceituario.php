@@ -68,9 +68,9 @@ if (isset($_GET["codigo"])){
 }};
 
 // Busca informações do paciente
-$sqlpac = "SELECT nome, id, convenio FROM pacientes WHERE codigo = '$codigo'";
-$resultadopac = mysql_query($sqlpac);
-$resultpac = mysql_fetch_array($resultadopac);
+//$sqlpac = "SELECT nome, id, convenio FROM pacientes WHERE codigo = '$codigo'";
+//$resultadopac = mysql_query($sqlpac);
+//$resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
 $sqlficha = "SELECT data, pesoatual FROM receituario WHERE codigo = '$codigo'";
