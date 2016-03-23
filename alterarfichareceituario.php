@@ -67,9 +67,20 @@ if (isset($_GET["codigo"])){
 	$codigo = utf8_decode($_POST["codigo"]);
 }};
 
+// Busca informações do paciente
 $sqlpac = "SELECT nome, id, convenio FROM pacientes WHERE codigo = '$codigo'";
 $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
+
+// Busca informações da ficha do paciente
+$sqlficha = "SELECT data, pesoatual FROM pacientes WHERE codigo = '$codigo'";
+$resultadoficha = mysql_query($sqlficha);
+$resultficha = mysql_fetch_array($resultadoficha);
+
+// Data para ser exibida
+$datan = implode("/", array_reverse(explode("-", $resultficha[0])));
+
+
 ?>
 
 <!-- INICIO DO ARQUIVO -->
@@ -142,7 +153,7 @@ $resultpac = mysql_fetch_array($resultadopac);
                             <td bgcolor="#FDFDFD">
                                 <label>Peso Atual</label>
                                 <div class="input-control text size2" data-role="input-control">
-	                                <input type="text" id="pesoatual" name="pesoatual" placeholder="Peso Atual">
+	                                <input type="text" id="pesoatual" name="pesoatual" value="<? echo $resultficha[1]; ?>" placeholder="Peso Atual">
 	                            </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
