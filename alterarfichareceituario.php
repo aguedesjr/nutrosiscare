@@ -229,17 +229,17 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             
                             <label>Queixa Principal</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="queixa" value="<? echo $resultficha[8]; ?>" placeholder="Queixa Principal"></textarea>
+                                <textarea name="queixa" placeholder="Queixa Principal"><? echo $resultficha[8]; ?></textarea>
                             </div>
                             
                             <label>História Patológica Pregressa</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="histopato" value="<? echo $resultficha[9]; ?>" placeholder="História Patológica Pregressa"></textarea>
+                                <textarea name="histopato" placeholder="História Patológica Pregressa"><? echo $resultficha[9]; ?></textarea>
                             </div>
                             
                             <label>Medicamentos Regulares</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="medreg" value="<? echo $resultficha[10]; ?>" placeholder="Medicamentos Regulares"></textarea>
+                                <textarea name="medreg" placeholder="Medicamentos Regulares"><? echo $resultficha[10]; ?></textarea>
                             </div>
                             
                             <table><tr>
