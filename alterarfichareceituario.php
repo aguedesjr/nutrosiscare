@@ -73,7 +73,7 @@ $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
-$sqlficha = "SELECT data, pesoatual FROM receituario WHERE codigo = '$codigo'";
+$sqlficha = "SELECT data, pesoatual, altura, imc FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -160,14 +160,14 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <td bgcolor="#FDFDFD">
                                     <label>Altura</label>
                                     <div class="input-control text size2" data-role="input-control">
-                                        <input type="text" name="altura" placeholder="Altura">
+                                        <input type="text" name="altura" value="<? echo $resultficha[2]; ?>" placeholder="Altura">
                                     </div>
                                 </td>
                                 <br /></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                                 <td bgcolor="#FDFDFD">
                                 <label>IMC</label>
                                 <div class="input-control text size2" data-role="input-control">
-	                                <input type="text" id="imc" name="imc" placeholder="IMC">
+	                                <input type="text" id="imc" name="imc" value="<? echo $resultficha[3]; ?>" placeholder="IMC">
 	                            </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
