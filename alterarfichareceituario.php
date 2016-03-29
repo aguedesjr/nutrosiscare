@@ -229,17 +229,17 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             
                             <label>Queixa Principal</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="queixa" placeholder="Queixa Principal"><? echo $resultficha[8]; ?></textarea>
+                                <textarea name="queixa" placeholder="Queixa Principal"><? echo utf8_encode($resultficha[8]); ?></textarea>
                             </div>
                             
                             <label>História Patológica Pregressa</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="histopato" placeholder="História Patológica Pregressa"><? echo $resultficha[9]; ?></textarea>
+                                <textarea name="histopato" placeholder="História Patológica Pregressa"><? echo utf8_encode($resultficha[9]); ?></textarea>
                             </div>
                             
                             <label>Medicamentos Regulares</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="medreg" placeholder="Medicamentos Regulares"><? echo $resultficha[10]; ?></textarea>
+                                <textarea name="medreg" placeholder="Medicamentos Regulares"><? echo utf8_encode($resultficha[10]); ?></textarea>
                             </div>
                             
                             <table><tr>
@@ -247,7 +247,7 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <label>Alergia Medicamentosa</label>
                                 <div class="input-control select">
 	                                <select name="alergiamed">
-	                                	<option value="<? echo $resultficha[11]; ?>"><? echo $resultficha[11] ;?></option>
+	                                	<option value="<? echo utf8_encode($resultficha[11]); ?>"><? echo utf8_encode($resultficha[11]) ;?></option>
 	                                	<option value="">---------</option>
 	                                	<option value="SIM">SIM</option>
 	                                	<option value="NÃO">NÃO</option>
