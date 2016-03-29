@@ -76,7 +76,8 @@ $resultpac = mysql_fetch_array($resultadopac);
 $sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg, alergiamed, qualalergiamed,
 			 habint, ativfis, qualativfis, coltotal, hdl, ldl, vldl, ht, hb, glicose, hbglicosada, vcm, ureia, tgo, tgp, cpk,
 			 sodio, potassio, calcio, vitaminad, vitaminab12, acidofolico, ptnc, vhs, insulina, ptntotal, ttog, albumina,
-			 globulina, cafeusual, colacaousual, almocousual, lancheusual, jantarusual, ceiausual FROM receituario WHERE codigo = '$codigo'";
+			 globulina, cafeusual, colacaousual, almocousual, lancheusual, jantarusual, ceiausual, cafe, colacao, almoco, lanche, 
+			 jantar, ceia FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -601,37 +602,37 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                         <div class="frame" id="_page_5">
                             <label>Café da Manhã</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="cafe" placeholder="Café da Manhã"></textarea>
+                                <textarea name="cafe" placeholder="Café da Manhã"><? echo utf8_encode($resultficha[48]); ?></textarea>
                             </div>
                             
                             <label>Colação</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="colacao" placeholder="Colação"></textarea>
+                                <textarea name="colacao" placeholder="Colação"><? echo utf8_encode($resultficha[49]); ?></textarea>
                             </div>
                             
                             <label>Almoço</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="almoco" placeholder="Almoço"></textarea>
+                                <textarea name="almoco" placeholder="Almoço"><? echo utf8_encode($resultficha[50]); ?></textarea>
                             </div>
                             
                             <label>Lanche</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="lanche" placeholder="Lanche"></textarea>
+                                <textarea name="lanche" placeholder="Lanche"><? echo utf8_encode($resultficha[51]); ?></textarea>
                             </div>
                             
                             <label>Jantar</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="jantar" placeholder="Jantar"></textarea>
+                                <textarea name="jantar" placeholder="Jantar"><? echo utf8_encode($resultficha[52]); ?></textarea>
                             </div>
                             
                             <label>Ceia</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="ceia" placeholder="Ceia"></textarea>
+                                <textarea name="ceia" placeholder="Ceia"><? echo utf8_encode($resultficha[53]); ?></textarea>
                             </div>
                             
                             <label>Não Gosta</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="naogosta" placeholder="Não Gosta"></textarea>
+                                <textarea name="naogosta" placeholder="Não Gosta"><? echo utf8_encode($resultficha[54]); ?></textarea>
                             </div>
 							<br>
                             
