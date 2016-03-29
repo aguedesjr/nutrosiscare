@@ -74,7 +74,7 @@ $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
 $sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg, alergiamed, qualalergiamed,
-			 habint, ativfis, qualativfis FROM receituario WHERE codigo = '$codigo'";
+			 habint, ativfis, qualativfis, coltotal, hdl, ldl, vldl, ht, hb FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -325,13 +325,13 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>Colesterol Total</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="coltotal" name="coltotal" placeholder="Colesterol Total">
+                                <input type="text" id="coltotal" name="coltotal" value="<? echo utf8_encode($resultficha[16]); ?>" placeholder="Colesterol Total">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <label>HDL</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="hdl" name="hdl" placeholder="HDL">
+                                <input type="text" id="hdl" name="hdl" value="<? echo utf8_encode($resultficha[17]); ?>" placeholder="HDL">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
@@ -341,13 +341,13 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>LDL</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="ldl" name="ldl" placeholder="LDL">
+                                <input type="text" id="ldl" name="ldl" value="<? echo utf8_encode($resultficha[18]); ?>" placeholder="LDL">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <label>VLDL</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="vldl" name="vldl" placeholder="VLDL">
+                                <input type="text" id="vldl" name="vldl" value="<? echo utf8_encode($resultficha[19]); ?>" placeholder="VLDL">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
@@ -357,13 +357,13 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>HT</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="ht" name="ht" placeholder="HT">
+                                <input type="text" id="ht" name="ht" value="<? echo utf8_encode($resultficha[20]); ?>" placeholder="HT">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <label>HB</label>
                                 <div class="input-control text size3" data-role="input-control">
-                                <input type="text" id="hb" name="hb" placeholder="HB">
+                                <input type="text" id="hb" name="hb" value="<? echo utf8_encode($resultficha[21]); ?>" placeholder="HB">
                             </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
