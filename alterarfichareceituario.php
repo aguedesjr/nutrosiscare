@@ -77,7 +77,7 @@ $sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa
 			 habint, ativfis, qualativfis, coltotal, hdl, ldl, vldl, ht, hb, glicose, hbglicosada, vcm, ureia, tgo, tgp, cpk,
 			 sodio, potassio, calcio, vitaminad, vitaminab12, acidofolico, ptnc, vhs, insulina, ptntotal, ttog, albumina,
 			 globulina, cafeusual, colacaousual, almocousual, lancheusual, jantarusual, ceiausual, cafe, colacao, almoco, lanche, 
-			 jantar, ceia FROM receituario WHERE codigo = '$codigo'";
+			 jantar, ceia, naogosta FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
