@@ -77,7 +77,7 @@ $sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa
 			 habint, ativfis, qualativfis, coltotal, hdl, ldl, vldl, ht, hb, glicose, hbglicosada, vcm, ureia, tgo, tgp, cpk,
 			 sodio, potassio, calcio, vitaminad, vitaminab12, acidofolico, ptnc, vhs, insulina, ptntotal, ttog, albumina,
 			 globulina, cafeusual, colacaousual, almocousual, lancheusual, jantarusual, ceiausual, cafe, colacao, almoco, lanche, 
-			 jantar, ceia, naogosta FROM receituario WHERE codigo = '$codigo'";
+			 jantar, ceia, naogosta, conduta, obs FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -655,11 +655,11 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                         <div class="frame" id="_page_6">
                             <label>Conduta</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="conduta" placeholder="Conduta" rows="10"></textarea>
+                                <textarea name="conduta" placeholder="Conduta" rows="10"><? echo utf8_encode($resultficha[55]); ?></textarea>
                             </div>
                             <label>Observação</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="obs" placeholder="Observação" rows="10"></textarea>
+                                <textarea name="obs" placeholder="Observação" rows="10"><? echo utf8_encode($resultficha[56]); ?></textarea>
                             </div>
 							<br>
                             
