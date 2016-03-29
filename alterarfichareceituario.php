@@ -74,7 +74,7 @@ $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
 $sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg, alergiamed, qualalergiamed,
-			 habint, ativfis FROM receituario WHERE codigo = '$codigo'";
+			 habint, ativfis, qualativfis FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -295,7 +295,7 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <td bgcolor="#FDFDFD">
                                     <label>Qual</label>
                                     <div class="input-control text size4" data-role="input-control">
-                                        <input type="text" name="qualativfis" placeholder="Qual">
+                                        <input type="text" value="<? echo utf8_encode($resultficha[15]); ?>" name="qualativfis" placeholder="Qual">
                                     </div>
                                 </td>
                                 </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
