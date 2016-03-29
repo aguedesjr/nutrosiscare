@@ -73,7 +73,7 @@ $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
-$sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med FROM receituario WHERE codigo = '$codigo'";
+$sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -229,17 +229,17 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             
                             <label>Queixa Principal</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="queixa" placeholder="Queixa Principal"></textarea>
+                                <textarea name="queixa" value="<? echo $resultficha[8]; ?>" placeholder="Queixa Principal"></textarea>
                             </div>
                             
                             <label>História Patológica Pregressa</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="histopato" placeholder="História Patológica Pregressa"></textarea>
+                                <textarea name="histopato" value="<? echo $resultficha[9]; ?>" placeholder="História Patológica Pregressa"></textarea>
                             </div>
                             
                             <label>Medicamentos Regulares</label>
                             <div class="input-control textarea" data-role="input-control">
-                                <textarea name="medreg" placeholder="Medicamentos Regulares"></textarea>
+                                <textarea name="medreg" value="<? echo $resultficha[10]; ?>" placeholder="Medicamentos Regulares"></textarea>
                             </div>
                             
                             <table><tr>
