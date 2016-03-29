@@ -73,7 +73,7 @@ $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
-$sqlficha = "SELECT data, pesoatual, altura, imc FROM receituario WHERE codigo = '$codigo'";
+$sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -173,7 +173,7 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>CA</label>
                                 <div class="input-control text size2" data-role="input-control">
-	                                <input type="text" id="ca" name="ca" placeholder="CA">
+	                                <input type="text" id="ca" name="ca" value="<? echo $resultficha[4]; ?>" placeholder="CA">
 	                            </div>
                             <br></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             </tr>
@@ -183,14 +183,14 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                             <td bgcolor="#FDFDFD">
                                 <label>Peso Usual</label>
                                 <div class="input-control text size2" data-role="input-control">
-	                                <input type="text" id="pesousual" name="pesousual" placeholder="Peso Usual">
+	                                <input type="text" id="pesousual" name="pesousual" value="<? echo $resultficha[5]; ?>" placeholder="Peso Usual">
 	                            </div>
                             </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
                             <td bgcolor="#FDFDFD">
                                 <td bgcolor="#FDFDFD">
                                     <label>PA</label>
                                     <div class="input-control text size2" data-role="input-control">
-                                        <input type="text" name="pa" placeholder="PA">
+                                        <input type="text" name="pa" value="<? echo $resultficha[6]; ?>" placeholder="PA">
                                     </div>
                                 </td>
                                 <br /></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
