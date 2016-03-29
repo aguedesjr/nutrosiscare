@@ -73,7 +73,8 @@ $resultadopac = mysql_query($sqlpac);
 $resultpac = mysql_fetch_array($resultadopac);
 
 // Busca informações da ficha do paciente
-$sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg, alergiamed FROM receituario WHERE codigo = '$codigo'";
+$sqlficha = "SELECT data, pesoatual, altura, imc, ca, pesousual, pa, med, queixa, histopato, medreg, alergiamed, qualalergiamed,
+			 habint, ativfis FROM receituario WHERE codigo = '$codigo'";
 $resultadoficha = mysql_query($sqlficha);
 $resultficha = mysql_fetch_array($resultadoficha);
 
@@ -258,7 +259,7 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <td bgcolor="#FDFDFD">
                                     <label>Qual</label>
                                     <div class="input-control text size4" data-role="input-control">
-                                        <input type="text" name="qualalergiamed" placeholder="Qual">
+                                        <input type="text" value="<? echo utf8_encode($resultficha[12]); ?>" name="qualalergiamed" placeholder="Qual">
                                     </div>
                                 </td>
                                 </td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td><td bgcolor="#FDFDFD"></td>
@@ -270,7 +271,8 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <label>Hábitos Intestinais</label>
                                 <div class="input-control select">
 	                                <select name="habint">
-	                                	<option value="">SELECIONE</option>
+	                                	<option value="<? echo utf8_encode($resultficha[13]); ?>"><? echo utf8_encode($resultficha[13]) ;?></option>
+	                                	<option value="">---------</option>
 	                                	<option value="NORMAL">NORMAL</option>
 	                                	<option value="CONSTIPADO">CONSTIPADO</option>
 	                                	<option value="DIARRÉIA">DIARRÉIA</option>
@@ -282,7 +284,8 @@ $datan = implode("/", array_reverse(explode("-", $resultficha[0])));
                                 <label>Atividade Física</label>
                                 <div class="input-control select">
 	                                <select name="ativfis">
-	                                	<option value="">SELECIONE</option>
+	                                	<option value="<? echo utf8_encode($resultficha[14]); ?>"><? echo utf8_encode($resultficha[14]) ;?></option>
+	                                	<option value="">---------</option>
 	                                	<option value="SIM">SIM</option>
 	                                	<option value="NÃO">NÃO</option>
 	                                </select>
