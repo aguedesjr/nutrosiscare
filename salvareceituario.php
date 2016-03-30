@@ -425,7 +425,7 @@ if ($opbd == "cadastrar"){
 	mysql_query($sqli);
 	// Atualiza as informações no banco de dados
 } elseif ($opbd == "atualizar"){
-	$sqli = "";
+	$sqli = "UPDATE receituario SET data='$datan' WHERE codigo = '$codigo'";
 	mysql_query($sqli);
 }
 //-----------------------------------------------------------------------------------------------
