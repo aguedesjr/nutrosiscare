@@ -425,7 +425,13 @@ if ($opbd == "cadastrar"){
 	mysql_query($sqli);
 	// Atualiza as informações no banco de dados
 } elseif ($opbd == "atualizar"){
-	$sqli = "UPDATE receituario SET data='$datan' WHERE codigo = '$codigo'";
+	$sqli = "UPDATE receituario SET data='$datan', pesoatual='$pesoatual', altura='$altura', imc='$imc', ca='$ca', pesousual='$pesousual', pa='$pa', med='$med',
+	queixa='$queixa', histopato='$histopato', medreg='$medreg', alergiamed='$alergiamed', qualalergiamed='$qualalergiamed', habint='$habint', ativfis='$ativfis',
+	qualativfis='$qualativfis', coltotal='$coltotal', hdl='$hdl', ldl='$ldl', vldl='$vldl', ht='$ht', hb='$hb', glicose='$glicose', hbglicosada='$hbglicosada',
+	vcm='$vcm', ureia='$ureia', tgo='$tgo', tgp='$tgp', cpk='$cpk', sodio='$sodio', potassio='$potassio', calcio='$calcio', vitaminad='$vitaminad', vitaminab12='$vitaminab12',
+	acidofolico='$acidofolico', ptnc='$ptnc', vhs='$vhs', insulina='$insulina', ptntotal='$ptntotal', ttog='$ttog', albumina='$albumina', globulina='$globulina',
+	cafeusual='$cafeusual', colacaousual='$colacaousual', almocousual='$almocousual', lancheusual='$lancheusual', jantarusual='$jantarusual', ceiausual='$ceiausual', 
+	cafe='$cafe', colacao='$colacao', almoco='$almoco', lanche='$lanche', jantar='$jantar', ceia='$ceia', naogosta='$naogosta', conduta='$conduta', obs='$obs' WHERE codigo = '$codigo'";
 	mysql_query($sqli);
 }
 //-----------------------------------------------------------------------------------------------
